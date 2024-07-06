@@ -50,6 +50,30 @@ body {
 	background-color: var(--green);
 }
 
+.acaio {
+	border-right: 0.1rem solid var(--orange);
+}
+
+.avitor {
+	border-right: 0.1rem solid var(--purple);
+}
+
+.avivian {
+	border-right: 0.1rem solid var(--pink);
+}
+
+.aerika {
+	border-right: 0.1rem solid var(--yellow);
+}
+
+.apriscilla {
+	border-right: 0.1rem solid var(--blue);
+}
+
+.aromulo {
+	border-right: 0.1rem solid var(--green);
+}
+
 header {
 	box-sizing: border-box;
 	display: flex;
@@ -63,19 +87,20 @@ header {
 }
 
 nav {
-	box-sizing: border-box;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--orange);
-	border-right: 0.1rem solid var(--gray);
-	min-height: 3.5rem;
-	width: 10%;
-	margin: 1rem;
+	width: 100%;
 }
 
 a {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--gray);
+	min-height: 3.5rem;
+	width: 15%;
+	margin: 2%;
 	text-decoration: none;
 	font-family: 'Nunito', sans-serif;
 	color: var(--lightGray);
