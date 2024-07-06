@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	font-family: 'Nunito', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	--white: #fffcf2;
+	--lightGray: #ccc5b9;
+	--mediumGray: #918a7e80;
+	--gray: #403d39;
+	--darkGray: #252422;
+	--black: #0f0f0e;
+	--orange: #eb5e28;
+	--pink: #ff595e;
+	--yellow: #ffca3a;
+	--green: #8ac926;
+	--blue: #1982c4;
+	--purple: #6a4c93;
+}
+
+body {
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	background-color: var(--lightGray);
+}
+
+.caio {
+	background-color: var(--orange);
+}
+
+.vitor {
+	background-color: var(--purple);
+}
+
+.vivian {
+	background-color: var(--pink);
+}
+
+.erika {
+	background-color: var(--yellow);
+}
+
+.priscilla {
+	background-color: var(--blue);
+}
+
+.romulo {
+	background-color: var(--green);
+}
+
+.menu {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: start;
+	background-color: var(--black);
+	border-right: 0.1rem solid var(--gray);
+	min-height: 4.5rem;
+	width: 100%;
+}
+
+.paginas {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--gray);
+	border-right: 0.1rem solid var(--gray);
+	min-height: 3.5rem;
+	width: 10%;
+	margin: 1rem;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Nunito', sans-serif;
+	color: var(--lightGray);
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
