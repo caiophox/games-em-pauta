@@ -1,30 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-			rel="stylesheet"
-		/>
+		<meta name="description" content="Esse é o meu primeiro site" />
+		<meta name="Keywords" content="programação,html,css,javascript" />
+		<meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
 		<title>Games em Pauta</title>
 	</head>
-
 	<body>
-		<header>
+		<header style="background-color: rgb(172, 69, 216)">
+			<h1>Games em Pauta</h1>
 			<nav>
-				<a href="index.html">Início</a>
-				<a class="acaio" href="caio.html">Caio</a>
-				<a class="aerika" href="erika.html">Erika</a>
-				<a class="apriscilla" href="priscilla.html">Priscilla</a>
-				<a class="aromulo" href="romulo.html">Romulo</a>
-				<a class="avitor" href="vitor.html">Vitor</a>
-				<a class="avivian" href="vivian.html">Vivian</a>
+				<a href="caio.html">Caio</a>
+				<a href="erika.html">Erika</a>
+				<a href="priscilla.html">Priscilla</a>
+				<a href="vitor.html">Vitor</a>
+				<a href="vivian.html">Vívian</a>
 			</nav>
+			<form>
+				<input type="search" placeholder="Pesquise no site" /><img
+					src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+				/>
+			</form>
+
+			<img
+				src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+			/>
+			<img
+				src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+			/>
 		</header>
+		<section style="border: 2px solid black">
+			<button><span>Review anterior</span></button>
+			<div>
+				<figure>
+					<div>
+						<a href="#">
+							<img src="#" alt="card" />
+						</a>
+					</div>
+				</figure>
+			</div>
+			<div>
+				<figure>
+					<div>
+						<a href="#">
+							<img src="#" alt="card" />
+						</a>
+					</div>
+				</figure>
+			</div>
+			<div>
+				<figure>
+					<div>
+						<a href="#">
+							<img src="#" alt="card" />
+						</a>
+					</div>
+				</figure>
+			</div>
+			<button><span>Próxima review</span></button>
+			<form action="#">
+				<input type="radio" id="star5" name="rating" value="5" />
+				<label for="star5">&#9733;</label>
+				<input type="radio" id="star4" name="rating" value="4" />
+				<label for="star4">&#9733;</label>
+				<input type="radio" id="star3" name="rating" value="3" />
+				<label for="star3">&#9733;</label>
+				<input type="radio" id="star2" name="rating" value="2" />
+				<label for="star2">&#9733;</label>
+				<input type="radio" id="star1" name="rating" value="1" />
+				<label for="star1">&#9733;</label>
+			</form>
+		</section>
+		<div style="border: 2px solid black">
+			<h3>Login</h3>
+			<form action="#">
+				<input type="email" placeholder="Seu Email" required />
+				<input type="password" placeholder="Senha" required />
+				<a href="#">Esqueceu a Senha?</a>
+				<input type="submit" value="Login" />
+			</form>
+		</div>
+		<div style="border: 2px solid black">
+			<h3>Cadastre-se</h3>
+			<form>
+				<input type="text" placeholder="Seu nome de usuário" required />
+				<input type="password" placeholder="Sua senha" required />
+				<input type="checkbox" id="signupCheck" />
+				<label for="signupCheck">Aceito todos os termos e condições</label>
+				<input type="submit" value="Cadastre-se" />
+			</form>
+		</div>
+		<div>
+			<p style="border: 2px solid black">
+				Jogo Independente "Pixel Adventure" Supera 1 Milhão de Downloads 12 de
+				julho de 2024 O jogo independente "Pixel Adventure" alcançou um marco
+				significativo ao superar 1 milhão de downloads.
+			</p>
+			<p style="border: 2px solid black">
+				Nova Atualização de "Fantasy Quest" Traz Expansão Inédita 12 de julho de
+				2024 A popular franquia de RPG "Fantasy Quest" recebeu uma nova expansão
+				chamada "O Reino Perdido". A atualização inclui novas áreas, desafios e
+				personagens, além de melhorias de desempenho e correções de bugs.
+			</p>
+			<p style="border: 2px solid black">
+				Campeonato Mundial de "Battle Arena" Anunciado 12 de julho de 2024 O
+				torneio, com um prêmio de 2 milhões de dólares, reunirá os melhores
+				jogadores do mundo. As finais serão transmitidas ao vivo em agosto.
+			</p>
+		</div>
+		<footer style="background-color: rgb(172, 69, 216)">
+			<img src="img/raven_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+			<img src="img/smartphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+			<img src="img/thumb_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+			<img src="img/photo_camera_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+			<h2>Quem somos</h2>
+		</footer>
 	</body>
 </html>
