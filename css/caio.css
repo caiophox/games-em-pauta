@@ -1,0 +1,74 @@
+* {
+	/* reseta as config da página */
+	margin: 0;
+	padding: 0;
+}
+
+p {
+}
+
+header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-image: url('../img/galaxia-background.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat-y;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	display: flex;
+	overflow-x: hidden;
+}
+
+.corpo {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10vw;
+}
+.nebula {
+	background-image: url('../img/nebulas-background.png');
+	background-attachment: scroll;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	height: 1500px;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.vidro {
+	position: relative;
+	display: flex;
+	background-color: #1e1e1ead;
+	margin-top: 60px;
+	width: 90vw;
+	max-width: 90vw;
+	height: fit-content;
+	min-height: 1500px;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: center;
+}
+
+.card {
+	width: 200px;
+	height: 300px;
+	background-color: #dbdbdb30;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #dbdbdb;
+	padding: 2rem;
+	margin: 10px;
+}
