@@ -36,7 +36,7 @@ body {
 }
 .nebula {
 	background-image: url('../img/nebulas-background.png');
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: contain;
