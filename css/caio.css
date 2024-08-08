@@ -3,6 +3,7 @@
 	margin: 0%;
 	font-family: 'Roboto';
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -38,7 +39,9 @@ body {
 	flex-wrap: wrap;
 }
 
-.cardReview:hover {
+.cardReview:hover,
+.cardNoticia:hover,
+.cardAvaliacoes:hover {
 	background-color: #dbdbdb20;
 	box-shadow: 6px 8px 8px #00000050;
 	transition: 0.5s;
@@ -77,6 +80,15 @@ body {
 	white-space: nowrap;
 	height: 1.5rem;
 	overflow: hidden;
+}
+
+.tituloReview h6 {
+	margin: 5px 0;
+	font-size: 0.8rem;
+	text-shadow: 0.1rem 0.1rem #00000040;
+	font-family: 'Sora', sans-serif;
+	font-weight: 200;
+	color: #dbdbdb;
 }
 
 .imagemReview {
@@ -134,12 +146,6 @@ body {
 	flex-wrap: wrap;
 }
 
-.cardNoticia:hover {
-	background-color: #dbdbdb20;
-	box-shadow: 6px 8px 8px #00000050;
-	transition: 0.5s;
-}
-
 .cardNoticia {
 	background-color: #dbdbdb10;
 	height: 240px;
@@ -164,7 +170,7 @@ body {
 	/* background-color: coral; */
 	padding: 20px 0px 0px 25px;
 	text-shadow: 0.1rem 0.1rem #00000040;
-	font-size: 2vw;
+	font-size: 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -193,13 +199,14 @@ body {
 }
 
 .textoNoticia {
+	/* background-color: yellowgreen; */
 	height: 70%;
-	padding: 25px;
+	padding: 10px 25px 25px 25px;
 }
 
 .textoNoticia p {
 	display: -webkit-box;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 7;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	font-size: 1rem;
@@ -210,74 +217,55 @@ body {
 }
 
 .titulo {
-	/* Espaço livre para colocar o título do seu jogo, respeite as margens top e left */
-	background-color: royalblue;
+	/* background-color: royalblue; */
 	height: 240px;
-	width: calc(50% - 20px);
+	width: Max(400px, calc(50% - 20px));
 	margin: 10px;
-	min-width: 400px;
-}
-
-/* text clamping
-display: -webkit-box;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical; */
-
-/* .spacereview {
 	display: flex;
-	align-items: end;
-} */
-
-/* .spacereview img {
-	margin-right: 25px;
-	height: 161px;
-	width: 100px;
-	margin-top: 20px;
-	box-shadow: 4px 4px #00000050;
-} */
-
-/* .cortaconteudo {
-	Container para limitar o conteudo dentro do card
-	background-color: crimson;
-	height: calc(100% - 50px);
-	width: calc(100% - 50px);
-	margin: 25px;
-	overflow: hidden;
-} */
-
-/*.containernoticiatitulo {
-	 Container transparente para o container de notícias e o container de título
-	background-color: crimson; 
-	height: auto;
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-*/
-
-/* .containernoticia {
-	Container transparente para os dois cards de notícia
-	background-color: crimson; 
-	height: 240px;
-	width: calc(50% - 20px);
-	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	flex-wrap: wrap;
-	min-width: 400px;
-	margin: 10px;
-} */
+}
 
-/* .cardnoticia {
-	Cards de notícias
-	background-color: #dbdbdb10;
-	height: 240px;
-	width: calc(50% - 10px);
-	min-width: 160px;
-	box-shadow: 2px 4px 4px #00000050;
-} */
+.titulo img {
+	width: 100%;
+}
 
-.containermain {
+#tituloLogo {
+	animation: lift 10s ease-in-out infinite;
+}
+
+#reflection {
+	animation: reflectLift 10s ease-in-out infinite;
+	transform: scaleY(-1);
+	mask-image: linear-gradient(
+		to top,
+		#00000090 0%,
+		#00000010 40px,
+		#00000000 60px
+	);
+}
+
+@keyframes lift {
+	0%,
+	100% {
+		transform: translateY(90%);
+	}
+	50% {
+		transform: translateY(85%);
+	}
+}
+
+@keyframes reflectLift {
+	0%,
+	100% {
+		transform: scaleY(-1) translateY(-90%);
+	}
+	50% {
+		transform: scaleY(-1) translateY(-95%);
+	}
+}
+
+.containerMain {
 	/* Container transparente para a área livre e container lateral */
 	/* background-color: crimson; */
 	width: 100%;
@@ -289,15 +277,16 @@ display: -webkit-box;
 	flex-wrap: wrap;
 }
 
-.containerlateral {
+.containerLateral {
 	/* Container transparente para o container de avaliações e a barra extra */
 	/* background-color: crimson; */
 	width: 25%;
 	height: auto;
 	margin-bottom: 10px;
+	flex-grow: 0.9;
 }
 
-.containeravaliacoes {
+.containerAvaliacoes {
 	/* Container trasparente para os 3 cards de avaliação */
 	/* background-color: crimson; */
 	height: auto;
@@ -307,14 +296,72 @@ display: -webkit-box;
 	align-items: center;
 }
 
-.cardavaliacoes {
+.cardAvaliacoes {
 	/* Cards de avaliações */
 	background-color: #dbdbdb10;
 	height: 120px;
-	width: calc(100% - 20px);
+	width: clamp(160px, calc(100% - 20px), 550px);
 	margin: 10px 0;
-	min-width: 160px;
 	box-shadow: 2px 4px 4px #00000050;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 10px;
+	transition: 0.5s;
+	gap: 10px;
+}
+
+.cardAvaliacoes img {
+	height: 35px;
+	width: 35px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.conteudoAvalia {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: calc(100% - 35px);
+}
+
+.notaAvalia {
+	/* background-color: goldenrod; */
+	width: 100%;
+	height: 1.5rem;
+	display: flex;
+	gap: 2%;
+}
+
+.iconNota {
+	/* background-color: lightskyblue; */
+	background-image: url(../img/caio/factorio/Factorio.ico);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	width: 10%;
+	height: 100%;
+}
+
+.notaRuim {
+	opacity: 20%;
+}
+
+.notaMedia {
+	mask-image: linear-gradient(to right, #000 50%, #00000020 51%, #00000020);
+}
+
+.textoAvalia {
+	width: 100%;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: 0.8rem;
+	text-shadow: 0.1rem 0.1rem #00000040;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #dbdbdb;
 }
 
 .extra {
@@ -326,17 +373,22 @@ display: -webkit-box;
 
 .livre {
 	/* background-color: royalblue; */
-	height: 1000px;
+	height: fit-content;
 	width: calc(75% - 20px);
 	min-width: 600px;
 	margin: 10px;
 }
 
-/* Definições de texto para as áreas comuns/padronizadas */
+.livre h2 {
+	font-size: 2rem;
+	text-shadow: 0.1rem 0.1rem #00000040;
+	font-family: 'Sora', sans-serif;
+	font-weight: 600;
+	color: #dbdbdb;
+	padding: 25px;
+}
 
-/* .textoreview,
-.textonoticia {
-	margin-top: 1rem;
+.livre p {
 	font-size: 1rem;
 	text-shadow: 0.1rem 0.1rem #00000040;
 	font-family: 'Roboto', sans-serif;
@@ -344,36 +396,71 @@ display: -webkit-box;
 	color: #dbdbdb;
 	text-align: justify;
 	text-indent: 45px;
-	hyphens: manual;
-} */
-
-.titulonoticia {
-	font-size: 1rem;
-	text-shadow: 0.1rem 0.1rem #00000040;
-	font-family: 'Sora', sans-serif;
-	font-weight: 600;
-	color: #dbdbdb;
-	text-transform: uppercase;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	padding: 10px 25px;
 }
 
-/*definiçoes de imagens*/
-
-/* customize suas avaliações como quiser, colocando estrelas ou outros elementos, ou uma nota. Só mantenha o background de vidro, a cor da fonte e font family e respeite as margens/padding */
-.exemplo {
-	height: 35px;
-	width: 35px;
-	border-radius: 35px;
-	background-image: url(../img/menina-japonesa.jpg);
-	background-size: contain;
+.menuJogos {
+	/* background-color: midnightblue; */
+	display: flex;
+	gap: 20px;
 }
 
-.exemplo2 {
-	margin-top: 1rem;
-	font-size: 1rem;
-	text-shadow: 0.1rem 0.1rem #00000040;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 800;
+#buttonFactorio,
+#buttonHardspace {
+	height: 50px;
+	width: 50px;
+	background-color: #dbdbdb10;
+	border: none;
+	overflow: hidden;
+	transition: 0.5s;
+	background-repeat: no-repeat;
+	background-size: calc(100% - 15px);
+	background-position: center;
+}
+
+#buttonFactorio {
+	background-image: url(../img/caio/factorio/Factorio.ico);
+}
+
+#buttonHardspace {
+	background-image: url(../img/caio/hardspace/Hardspace.ico);
+}
+
+#buttonHardspace:hover {
+	background-color: #fad74280;
+	box-shadow: 6px 8px 8px #00000050;
+	transition: 0.5s;
+}
+
+#buttonFactorio:hover {
+	background-color: #eb8b2580;
+	box-shadow: 6px 8px 8px #00000050;
+	transition: 0.5s;
+}
+
+#loadingOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #1e1e1e;
 	color: #dbdbdb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	z-index: 99;
+}
+
+#loadingOverlay.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.iconHardspace {
+	background-image: url(../img/caio/hardspace/Hardspace.ico);
 }

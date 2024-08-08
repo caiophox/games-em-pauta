@@ -10,6 +10,7 @@
 		/>
 		<meta name="Keywords" content="programação, html, css, javascript" />
 		<meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
+		<link rel="icon" href="img/caio/factorio/Factorio.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -17,6 +18,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/caio.css" />
+		<script src="js/caio.js" defer></script>
 		<title>Games em Pauta - Jogos espaciais!</title>
 	</head>
 	<body>
@@ -43,9 +45,14 @@
 				<div class="cardReview">
 					<div class="tituloReview">
 						<p>Factorio: Fábrica Espacial</p>
+						<h6>por Jonas Belaro</h6>
 					</div>
 					<div class="imagemReview">
-						<img src="img/FactorioReview.png" alt="" />
+						<img
+							id="imgReview1"
+							src="img/caio/factorio/FactorioReview1.png"
+							alt=""
+						/>
 					</div>
 					<div class="textoReview">
 						<p>
@@ -62,23 +69,28 @@
 				</div>
 				<div class="cardReview">
 					<div class="tituloReview">
-						<p>Hardspace Shipbreaker</p>
+						<p>Trabalho ou diversão?</p>
+						<h6>por Higor Duarte</h6>
 					</div>
 					<div class="imagemReview">
-						<img src="img/HardspaceShipbreakerReview.png" alt="" />
+						<img
+							id="imgReview2"
+							src="img/caio/factorio/FactorioReview2.png"
+							alt=""
+						/>
 					</div>
 					<div class="textoReview">
 						<p>
-							Hardspace Shipbreaker coloca você no papel de um trabalhador
-							espacial encarregado de desmontar naves espaciais abandonadas. A
-							física realista e os perigos constantes, como explosões e
-							vazamentos de combustível, criam uma atmosfera tensa e envolvente.
-							Cada nave é um quebra-cabeça único, exigindo estratégias
-							cuidadosas e precisão cirúrgica. A narrativa, embora sutil,
-							adiciona profundidade ao cenário de exploração espacial. Com uma
-							jogabilidade envolvente e um ambiente imersivo, Hardspace
-							Shipbreaker oferece uma experiência única para quem busca um
-							desafio técnico e emocionante.
+							Eu sempre gostei de jogos que desafiam minha mente, e quando
+							comecei a jogar Factorio, não imaginava o quão profundo ele seria.
+							Como engenheiro, fiquei impressionado com a complexidade técnica e
+							a precisão do jogo, que roda perfeitamente. O suporte a mods é
+							incrível, tornando a instalação e personalização extremamente
+							fáceis. A Wube Software não só apoia a comunidade de modding, mas
+							também incorpora mods populares e até contrata modders talentosos.
+							Isso aumenta a longevidade do jogo e me permite adaptar a
+							experiência às minhas preferências. Factorio é uma verdadeira
+							obra-prima de engenharia interativa.
 						</p>
 					</div>
 				</div>
@@ -87,106 +99,237 @@
 				<div class="containerNoticia">
 					<div class="cardNoticia">
 						<div class="imagemNoticia"><p>📰</p></div>
-						<div class="tituloNoticia"><p>Stellaris: Diplomacia Real</p></div>
+						<div class="tituloNoticia">
+							<p>Factorio: Realidade Aumentada</p>
+						</div>
 						<div class="textoNoticia">
 							<p>
-								Parceria com líderes globais permitirá que jogadores influenciem
-								decisões reais de política internacional através de simulações
-								avançadas e negociações diplomáticas in-game.
+								Wube Software anuncia parceria com Vale para criar uma
+								experiência onde jogadores podem construir fábricas em ambientes
+								reais em Minas Gerais, transformando qualquer espaço em uma
+								fábrica alienígena.
 							</p>
 						</div>
 					</div>
 					<div class="cardNoticia">
 						<div class="imagemNoticia"><p>📰</p></div>
 						<div class="tituloNoticia">
-							<p>No Man's Sky: Dinossauros Espaciais</p>
+							<p>Hamburguer de biter? Nuggets alien?</p>
 						</div>
 						<div class="textoNoticia">
 							<p>
-								Nova atualização traz dinossauros alienígenas para os planetas,
-								permitindo aos jogadores domesticar e montar essas criaturas
-								gigantes enquanto exploram o universo.
+								McDonald's lança uma linha exclusiva de hambúrgueres com "carne
+								alienígena", inspirada em Factorio. A novidade é aprovada pela
+								ANVISA e promete uma experiência de sabor intergaláctico para os
+								fãs do jogo.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="titulo"></div>
+				<div class="titulo">
+					<div class="menuJogos">
+						<button id="buttonFactorio"></button>
+						<button id="buttonHardspace"></button>
+					</div>
+					<img
+						src="img/caio/factorio/Factorio-logo.png"
+						id="tituloLogo"
+						alt=""
+					/>
+					<img
+						src="img/caio/factorio/Factorio-logo.png"
+						id="reflection"
+						alt=""
+					/>
+				</div>
 			</div>
-
-			<div class="containermain">
+			<div id="loadingOverlay">
+				<div>Loading...</div>
+			</div>
+			<div class="containerMain">
 				<div class="livre">
-					<div>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus,
-						exercitationem tempora? Voluptatum eligendi doloribus voluptate
-						voluptatibus fuga sit consectetur amet nihil tempore magnam, nemo
-						architecto quis illum explicabo aut culpa a exercitationem quod
-						tempora. Aliquam vel quos dolore autem ea ex consequuntur nam!
-						Animi, sapiente exercitationem dolore labore incidunt quod! Nobis
-						eaque mollitia facilis neque sapiente maxime hic alias rem
-						repudiandae doloremque excepturi, itaque perspiciatis, quam natus
-						dicta! Impedit corporis qui architecto amet quam odit id dolore sit
-						sequi inventore error corrupti exercitationem, voluptatibus minima
-						harum tempore neque veniam ea voluptate laboriosam a excepturi!
-						Suscipit, debitis ad distinctio labore repudiandae ea. Rem doloribus
-						aperiam vel nobis, quo sunt nemo. Nostrum, doloribus sed! Beatae
-						eaque accusamus aut quisquam numquam quam, at quia dolorum, odit sed
-						quo laboriosam omnis? Maiores iste voluptatibus mollitia, expedita
-						fuga assumenda, inventore asperiores voluptatem commodi ex unde at
-						quaerat optio animi! Eius commodi expedita amet deserunt mollitia
-						culpa odit assumenda magni id in quam tempore vero inventore totam
-						non perspiciatis, aliquid dolores sed voluptas officiis distinctio
-						optio. Animi voluptas reprehenderit accusamus maiores ad laboriosam
-						expedita corrupti, nesciunt mollitia totam eligendi est. Ipsum
-						molestias facere ut recusandae consequuntur praesentium vitae
-						molestiae esse quod! Vel at, pariatur quod accusamus praesentium
-						natus laudantium consectetur ut, odit repellat id aperiam
-						necessitatibus dicta ad vero sapiente recusandae omnis animi
-						corrupti enim, minus alias quaerat quae. Iure maiores veritatis
-						ipsam aut ea impedit, delectus ipsa totam fuga, aliquid
-						necessitatibus sunt magnam ab voluptates labore asperiores autem
-						eius vero dolor! Inventore corrupti, repudiandae sed itaque
-						voluptates consectetur ad ullam eum aliquid deserunt ab, magni amet
-						nihil facere porro accusantium earum? Provident odio et nostrum
-						consequuntur doloribus praesentium ut quod quia perferendis ipsa
-						molestias minus soluta mollitia voluptatum in autem, nihil
-						blanditiis pariatur, sit iste veritatis dolorum? Iste ex pariatur
-						ullam eveniet necessitatibus, amet atque, similique, beatae corrupti
-						alias odio. Harum quis ipsam perspiciatis ipsa! Eos dolor fugit
-						corrupti magni voluptate! Consequuntur odio praesentium velit iure
-						architecto provident, dolores repudiandae exercitationem rerum
-						incidunt eligendi deserunt porro cumque vero, eveniet optio earum
-						aspernatur, nemo nisi illum minus voluptatem harum doloribus.
-						Expedita rem sit velit quis sequi magni aliquid obcaecati sint
-						eveniet, quia, ex quae voluptatum nesciunt placeat quibusdam. Cum,
-						praesentium doloribus debitis nesciunt commodi tenetur doloremque,
-						et architecto quas voluptatem eaque explicabo, fuga quibusdam! Dicta
-						quibusdam a pariatur nemo aliquam? Autem quidem beatae reiciendis
-						cupiditate facere, officia dolorem illo ea incidunt cum perspiciatis
-						consectetur ducimus architecto enim numquam sit debitis quibusdam
-						ullam repellendus odio animi velit quod minima ipsa? Similique,
-						pariatur incidunt eius facilis totam, ullam suscipit deserunt
-						eveniet unde aperiam culpa laboriosam officiis illo ea
-						exercitationem adipisci vero praesentium corrupti. Earum saepe
-						quaerat eius iusto tempora est repudiandae debitis rem repellat
-						facilis asperiores, consequatur et quod adipisci, perferendis
-						sapiente ipsum maiores deleniti. Quisquam et sit beatae velit qui,
-						nostrum magnam temporibus. Obcaecati quam recusandae nihil corrupti,
-						ratione ea distinctio. Possimus quaerat quasi voluptates eius
-						mollitia, veritatis minima quod unde facilis nemo iusto esse, optio
-						provident magni excepturi velit suscipit nostrum aperiam. Veritatis
-						iure debitis exercitationem.
+					<div class="textoLivre">
+						<h2>Um Universo de Possibilidades</h2>
+						<p>
+							Factorio, desenvolvido pela Wube Software, é um jogo de construção
+							e gerenciamento que transporta os jogadores para um universo
+							futurístico onde a automação é a chave para a sobrevivência. O
+							jogo começa com o protagonista preso em um planeta alienígena, com
+							o objetivo de construir uma fábrica capaz de produzir todos os
+							componentes necessários para escapar. O mundo de Factorio é vasto
+							e repleto de recursos, com desafios únicos como fauna alienígena
+							hostil e a necessidade de gerenciar poluição. A atmosfera é densa
+							e imersiva, com uma trilha sonora que complementa a sensação de
+							aventura e exploração.<br /><br />
+							O jogo ganhou uma base de fãs dedicada e é um dos títulos mais bem
+							avaliados na Steam, graças à sua jogabilidade profunda e
+							gratificante. A iminente expansão "Space Age" promete expandir
+							ainda mais o universo de Factorio, introduzindo viagens
+							interplanetárias e novos desafios. O jogo é tanto uma simulação
+							complexa de gestão quanto um título de ação, oferecendo uma
+							experiência diversificada para diferentes tipos de jogadores. Se
+							você é alguém que aprecia desafios intelectuais ou simplesmente
+							gosta de criar sistemas eficientes, Factorio oferece um campo
+							vasto de possibilidades.
+						</p>
+						<h2>Jogabilidade e Mecânicas: Construção e Combate</h2>
+						<p>
+							Em Factorio, o objetivo principal é criar uma fábrica eficiente
+							que possa produzir todos os itens necessários para construir um
+							foguete e escapar do planeta. Isso envolve a extração de recursos,
+							processamento de materiais, e montagem de produtos finais. A
+							jogabilidade é baseada na otimização, com jogadores constantemente
+							ajustando e melhorando suas linhas de produção para alcançar maior
+							eficiência. O jogo é incrivelmente detalhado, com cada aspecto da
+							fábrica, desde a mineração até a produção final, necessitando de
+							atenção cuidadosa.<br /><br />
+							Além da construção e gestão, Factorio também inclui elementos de
+							combate. Os jogadores enfrentam uma fauna alienígena hostil que se
+							torna mais agressiva à medida que a fábrica se expande e polui o
+							ambiente. Isso adiciona uma camada de ação ao jogo, exigindo que
+							os jogadores construam defesas e desenvolvam tecnologias de
+							combate para proteger suas instalações. A combinação de construção
+							estratégica e combate tático faz de Factorio uma experiência única
+							e envolvente, que desafia tanto a mente quanto os reflexos.
+						</p>
+						<h2>Estratégias e Dicas: Otimizando Sua Fábrica</h2>
+						<p>
+							Para ter sucesso em Factorio, é crucial desenvolver uma fábrica
+							eficiente. Uma das principais estratégias é o uso de layouts
+							modulares, que permitem a fácil expansão e ajuste das linhas de
+							produção. Isso inclui a criação de sistemas de transporte bem
+							organizados, como esteiras e trens, para mover recursos entre
+							diferentes áreas da fábrica. A otimização do uso de energia é
+							outra consideração importante, com jogadores frequentemente
+							buscando maneiras de reduzir o consumo de energia e aumentar a
+							produção.<br /><br />
+							Outra estratégia essencial é a gestão de recursos e a prevenção de
+							gargalos. Identificar e solucionar problemas que impedem a
+							produção eficiente é uma habilidade crítica. Além disso, os
+							jogadores devem estar sempre prontos para adaptar suas fábricas a
+							novas tecnologias e desafios, como a necessidade de produzir novos
+							itens ou se defender contra ataques alienígenas. A flexibilidade e
+							a capacidade de planejar à frente são habilidades fundamentais
+							para qualquer jogador que queira dominar Factorio.
+						</p>
+						<h2>Um Gênero Único</h2>
+						<p>
+							Factorio é frequentemente comparado a outros jogos de construção e
+							gerenciamento, como Satisfactory, RimWorld e Cities: Skylines. No
+							entanto, Factorio se destaca por sua profundidade e complexidade
+							únicas. Enquanto Satisfactory compartilha a ênfase na automação e
+							na construção de fábricas, Factorio é mais focado na otimização de
+							linhas de produção e na gestão de recursos. RimWorld, por outro
+							lado, se concentra mais na sobrevivência e nas interações sociais
+							dos colonos, enquanto Factorio se mantém firme na construção e
+							automação.<br /><br />
+							Cities: Skylines, embora também seja um jogo de construção, é mais
+							voltado para a gestão de uma cidade e suas infraestruturas.
+							Factorio, em contraste, oferece uma experiência mais técnica e
+							industrial, onde cada decisão pode ter um impacto significativo na
+							eficiência geral da fábrica. O nível de personalização e
+							complexidade em Factorio é inigualável, tornando-o uma experiência
+							única para os jogadores que apreciam desafios intelectuais e
+							estratégicos.
+						</p>
+						<h2>Futuro de Factorio: Novas Fronteiras</h2>
+						<p>
+							Com a expansão "Space Age" no horizonte, o futuro de Factorio
+							parece mais promissor do que nunca. Esta atualização promete
+							adicionar uma nova camada de complexidade ao jogo, permitindo que
+							os jogadores explorem e colonizem outros planetas. Isso abrirá
+							novas oportunidades para a exploração de recursos e a construção
+							de fábricas em diferentes ambientes. A expansão também trará novas
+							tecnologias e desafios, incluindo a necessidade de gerenciar
+							múltiplas fábricas em planetas distintos.<br /><br />
+							Além da expansão, a comunidade de Factorio é incrivelmente ativa,
+							com mods que ampliam e modificam o jogo de várias maneiras. Desde
+							novos sistemas de transporte até alterações na mecânica de
+							combate, esses mods permitem aos jogadores personalizar sua
+							experiência de jogo de maneira significativa. Com uma base de fãs
+							dedicada e uma equipe de desenvolvimento comprometida, Factorio
+							está preparado para continuar evoluindo e oferecendo novos
+							desafios para seus jogadores. Se você ainda não experimentou este
+							jogo incrível, agora é o momento perfeito para embarcar nesta
+							jornada de automação e descoberta.
+						</p>
 					</div>
 				</div>
-				<div class="containerlateral">
-					<div class="containeravaliacoes">
-						<div class="cardavaliacoes">
-							<div class="cortaconteudo">
-								<div class="exemplo"></div>
-								<div class="exemplo2">Adorei o jogo!</div>
+				<div class="containerLateral">
+					<div class="containerAvaliacoes">
+						<div class="cardAvaliacoes">
+							<img
+								id="imgUser1"
+								src="img/caio/factorio/FactorioUser1.jpg"
+								alt=""
+							/>
+							<div class="conteudoAvalia">
+								<div class="notaAvalia">
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+								</div>
+								<div class="textoAvalia">
+									<h3>João_FactoryM</h3>
+									<p>
+										Factorio é incrível! A complexidade e detalhes me prendem
+										por horas. Cada atualização é melhor que a anterior.
+										Totalmente viciante e vale cada minuto!
+									</p>
+								</div>
 							</div>
 						</div>
-						<div class="cardavaliacoes"><div class="cortaconteudo"></div></div>
-						<div class="cardavaliacoes"><div class="cortaconteudo"></div></div>
+						<div class="cardAvaliacoes">
+							<img
+								id="imgUser2"
+								src="img/caio/factorio/FactorioUser2.jpg"
+								alt=""
+							/>
+							<div class="conteudoAvalia">
+								<div class="notaAvalia">
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota notaRuim"></div>
+								</div>
+								<div class="textoAvalia">
+									<h3>Techie_Tom</h3>
+									<p>
+										Curti bastante o jogo, cheio de desafios e estratégias
+										legais. Pode ficar meio repetitivo depois de um tempo, mas
+										ainda assim, recomendo muito pra quem gosta de automação e
+										construção!
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="cardAvaliacoes">
+							<img
+								id="imgUser3"
+								src="img/caio/factorio/FactorioUser3.jpg"
+								alt=""
+							/>
+							<div class="conteudoAvalia">
+								<div class="notaAvalia">
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota"></div>
+									<div class="iconNota notaMedia"></div>
+								</div>
+								<div class="textoAvalia">
+									<h3>MariaGamer_82</h3>
+									<p>
+										Amo Factorio! A mistura de estratégia e ação é demais. A
+										curva de aprendizado é difícil, mas ver minha fábrica
+										funcionando certinho é super recompensador. Recomendo!
+									</p>
+								</div>
+							</div>
+						</div>
 						<div class="extra"></div>
 					</div>
 				</div>
