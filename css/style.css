@@ -28,8 +28,6 @@ body {
 .box-slider {
 	height: auto;
 	padding: 20px;
-	
-
 }
 
 input[type=radio] {
@@ -53,6 +51,12 @@ input[type=radio] {
 	right: 0;
 	cursor: pointer;
 	transition: transform 0.4s ease;
+}
+ 
+label img {
+	height: 100%;
+	width: 100%;
+	filter: drop-shadow(10px 0 10px #000000) drop-shadow(-10px 0 10px #000000);
 }
 
 #s1:checked~#slide4,
