@@ -1,5 +1,6 @@
 const buttonFactorio = document.getElementById('buttonFactorio');
 const buttonHardspace = document.getElementById('buttonHardspace');
+const buttonCyberpunk = document.getElementById('buttonCyberpunk');
 const tituloLogo = document.getElementById('tituloLogo');
 const reflection = document.getElementById('reflection');
 const loadingOverlay = document.getElementById('loadingOverlay');
@@ -21,13 +22,12 @@ const titleFree = document.querySelectorAll('.textoLivre h2');
 const textFree = document.querySelectorAll('.textoLivre p');
 
 buttonFactorio.addEventListener('click', function () {
-	// Show the loading overlay
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
 		// Change the src of the img elements
-		tituloLogo.src = 'img/caio/factorio/Factorio-logo.png';
-		reflection.src = 'img/caio/factorio/Factorio-logo.png';
+		tituloLogo.src = 'img/caio/factorio/FactorioLogo.png';
+		reflection.src = 'img/caio/factorio/FactorioLogo.png';
 		favicon.href = 'img/caio/factorio/Factorio.ico';
 		imgReview1.src = 'img/caio/factorio/FactorioReview1.png';
 		imgReview2.src = 'img/caio/factorio/FactorioReview2.png';
@@ -84,7 +84,6 @@ buttonFactorio.addEventListener('click', function () {
 });
 
 buttonHardspace.addEventListener('click', function () {
-	// Show the loading overlay
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
@@ -146,4 +145,19 @@ buttonHardspace.addEventListener('click', function () {
 		}, 200); // Wait for 1 second before hiding the overlay
 	}, 500); // Wait for 0.5 second before changing the images
 });
-console.log(titleReview);
+
+buttonCyberpunk.addEventListener('click', function () {
+	// Show the loading overlay
+	loadingOverlay.classList.add('show');
+
+	setTimeout(function () {
+		// Change the src of the img elements
+		tituloLogo.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
+		reflection.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
+		favicon.href = 'img/caio/cyberpunk/Cyberpunk.ico';
+
+		setTimeout(function () {
+			loadingOverlay.classList.remove('show');
+		}, 200); // Wait for 1 second before hiding the overlay
+	}, 500); // Wait for 0.5 second before changing the images
+});
