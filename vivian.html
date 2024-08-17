@@ -7,72 +7,217 @@
 		<meta name="description" content="Esse é o meu primeiro site" />
 		<meta name="Keywords" content="programação,html,css,javascript" />
 		<meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/vivian.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 		<title>Games em Pauta</title>
 	</head>
 	<body>
-		<header style="background-color: rgb(122, 72, 254); height: 60px; padding: 10px;">
-            <a href="index.html">
-				<img src="./img/logo.svg" alt="Logo Gamesempauta"/>
-			</a>
-			    <a href="caio.html">Caio</a>
-				<a href="erika.html">Erika</a>
-				<a href="priscilla.html">Priscilla</a>
-				<a href="vitor.html">Vitor</a>
-				<a href="vivian.html">Vívian</a>
-				<input type="search" placeholder="Pesquise no site" />
-				<img src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"/>
-				<img src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"/>
-				<img src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"/>
-			
-		</header>
+		<header>
+			<div class="logo">
+				<a href="index.html">
+					<img src="./img/logo.svg" alt="Logo Games em Pauta"/>
+				</a>
+				</div>
+				<nav class="menu">
+					<a href="caio.html">Caio</a>
+					<a href="erika.html">Erika</a>
+					<a href="priscilla.html">Priscilla</a>
+					<a href="vitor.html">Vitor</a>
+					<a href="vivian.html">Vívian</a>
+				</nav>
+
+			<div class="searchBarra">
+					<input type="search" placeholder="Pesquise no site" />
+					<button class="search-button">
+						<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
+					</button>
+			</div>
+			<div class="opcoesUser">
+				<div class="opcao">
+					<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+					<span>Minha Conta</span>
+				</div>
+				<div class="opcao">
+					<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+					<span>Meu Carrinho</span>
+				</div>
+			</div>
+			</header>
         
-        <section>
-            <div>
-                <h2>Review</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis veritatis quaerat reiciendis deleniti, ratione perspiciatis doloremque laudantium! Placeat magni expedita perferendis nobis officiis odio dolorum... Ler Mais</p>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sit necessitatibus nisi amet harum officia corrupti explicabo officiis voluptatum eum, exercitationem repellendus tempora ab nesciunt delectus... Ler Mais</p>
-            </div>
+        <section class="principal">
+            <div class="containerReview">
+                <div class="cardReview">
+					 <div class="tituloReview">
+						<p>The Sims 4</p>
+						<h6>Por Sarah Andrade</h6>
+				     </div>
+                    <div class="reviewImagemTexto">
+                        <img id="imgreview1" src="./img/vivian/the-sims-4-img-review-mudanca.jpg" alt="thesimsreview">
+                    </div>  
+					<div class="textoReview">
+						<p>
+							The Sims 4 é um popular jogo de simulação de vida que permite criar e controlar personagens com personalização detalhada e interações baseadas em emoções. Apesar de ser visualmente atraente e oferecer uma experiência divertida, o jogo foi criticado por sua falta de conteúdo básico no lançamento, como piscinas e bebês, que só foram adicionados em expansões. Com várias atualizações e pacotes de conteúdo, o jogo se expandiu, mas ainda depende de expansões pagas para uma experiência completa.
+						</p>
+                    </div>
+                </div>
 
-            <div>
-                <h2>Notícias</h2>
-                <p style="color:gray">17 de julho de 2024</p>
-                <p><b>Nova Expansão:</b> Uma nova expansão está chegando, para os amantes da natureza, a expansão  Vida Campestre adiciona diversos elementos... Ler Mais</p>
-                <hr>
-                <p style="color:gray"> 15 de julho de 2024</p>
-                <p><b>Atualização:</b> Atualização 5.8.3, em alguns dias será lançado a expansão The Sims 4: Vida Campestre. Essa atualização corrige diversos problemas relatados... Ler Mais</p>
+                <div class="cardReview">
+                    <div class="tituloReview">
+						<p>The Sims Mobile</p>
+						<h6>Por Davi Souza</h6>
+					</div>
+                    <div class="reviewImagemTexto">
+                        <img id="imgreview2" src="img/vivian/the-sims-mobile-review-2.jpg" alt="thesimsreview">
+					</div>
+                    <div class="textoReview">
+						<p>
+							The Sims Mobile é uma versão simplificada do clássico jogo de simulação, adaptada para dispositivos móveis. Ele oferece a criação de personagens e personalização de casas, com uma jogabilidade focada em tarefas diárias e eventos temporários. Embora mantenha a essência da franquia, o jogo é limitado por um sistema de energia que restringe o progresso e incentiva compras dentro do aplicativo. A experiência é divertida para sessões curtas, mas pode se tornar repetitiva e frustrante devido às limitações impostas pelo modelo freemium.
+
+						</p>
+                    </div>
+                </div>
+            </div>
                 
+            <div class="containerNoticiaTitulo">
+				<div class="containerNoticia">
+					<div class="cardNoticia">
+						<div class = "dataNoticia"><p>17 de julho de 2024</p></div>
+						<div class = "tituloNoticia">
+							<p>Nova Expansão:</p>
+						</div>
+						<div class="textoNoticia">
+							<p>
+								Uma nova expansão está chegando, para os amantes da natureza, a expansão Vida Campestre adiciona... <strong>Ler Mais</strong>
+							</p>
+                    </div>
+				</div>
+					<div class="cardNoticia">
+						<div class = "dataNoticia"><p>10 de julho de 2024</p></div>
+						<div class="tituloNoticia">
+							<p>Atualização 5.8.3</p>
+						</div>
+						<div class="textoNoticia">
+							<p>
+								Em alguns dias será lançada a expansão The Sims 4: Vida Campestre. Essa atualização corrige diversos...<strong>Ler Mais</strong>
+							</p>
+						</div>
+			       </div>
+			   </div>
+			<div class="titulo">
+				<img id="imgtitulo" src="./img/vivian/Sims_4_logo.svg" alt="imgtitulo">
             </div>
+		</div>
 
-            <div>
-                <img src="./img/Sims_4_logo.svg" alt="Logo The Sims" width="400" height="200"/>
+            <div class="containerMain">
+				<div class="livre">
+					<div class="textoLivre">
+						<p>
+							The Sims 4 é um jogo de simulação de vida da <strong>Maxis</strong>, lançado pela <strong>Eletronic Arts</strong> em setembro de 2014. 
+							Nesse incrível jogo, você poderá criar e controlar personagens virtuais, gerenciando todos os aspectos de suas vidas, 
+							desde a aparência e personalidades até suas casas e carreiras. O jogo é famoso por sua vasta personalização e liberdade criativa. 
+							Com várias expansões e pacotes de conteúdo, The Sims 4 continua a evoluir, adicionando novos recursos, objetos e experiências. 
+							É uma plataforma aberta onde você pode contar suas próprias histórias e explorar infinitas possibilidades sociais.  O jogo também promove a criatividade ao permitir que os jogadores experimentem diferentes estilos de vida, carreiras e relacionamentos. Com atualizações regulares, The Sims 4 permanece relevante e popular, proporcionando diversão contínua para jogadores de todas as idades. Seu dinamismo constante faz com que ele seja mais do que apenas um jogo, mas um mundo virtual em constante crescimento, onde os jogadores podem se expressar e se envolver de maneiras únicas.
+						</p>
+						<h2>Projete, Transforme, Construa e Viva</h2>
+						<div class="textodiferente">
+						<p>
+							Com o novo editor de Sims, você terá controle total para modificar cada detalhe do seu personagem. Uma infinidade de opções permite criar e controlar Sims com personalidades únicas e aparências distintas, fazendo com que cada personagem seja verdadeiramente único. Idealize e construa seus espaços nos mundos disponíveis ou escolha entre as vastas opções de casas e cômodos na galeria. The Sims 4 oferece uma experiência completa de simulação de vida, permitindo que você personalize cada aspecto dos seus Sims e crie histórias envolventes. <br> </br>
+							A ferramenta de construção no jogo proporciona liberdade para criar desde casas aconchegantes até mansões imponentes, adaptando cada espaço de acordo com o estilo de vida e as preferências dos seus personagens. A galeria online complementa essa experiência, oferecendo uma vasta coleção de criações feitas pela comunidade, onde você pode explorar, compartilhar e se inspirar com as ideias de outros jogadores. Além disso, The Sims 4 é um jogo dinâmico, constantemente atualizado com novas expansões e pacotes de conteúdo que introduzem novos recursos, objetos e experiências. Isso garante que o jogo permaneça sempre inovador e envolvente, oferecendo novas possibilidades para os jogadores explorarem e desfrutarem.
+						</p>
+						<h2>Mundos e Expansões</h2>
+						<p>
+							O jogo base inclui vários mundos onde os Sims podem viver, trabalhar e se divertir. Além disso, existem diversas expansões, pacotes de jogo e pacotes de objetos que adicionam novos conteúdos, como novos mundos, carreiras, atividades e objetos. Exemplos incluem "Vida na Cidade", "Gatos e Cães", "Estações", e muito mais. <br> <br> Cada expansão introduz novas possibilidades, ampliando as opções de personalização e jogabilidade. Com atualizações contínuas, The Sims 4 oferece novos desafios e experiências, garantindo que a diversão nunca acabe e cada sessão de jogo seja única e emocionante.
+						</p>
+						<h2>Comunidades e Mods</h2>
+						<p>
+							The Sims 4 tem uma comunidade ativa de criadores que desenvolvem mods e conteúdos personalizados para o jogo, permitindo aos jogadores expandir ainda mais a experiência com novos itens, comportamentos e funcionalidades. Essa comunidade oferece uma vasta gama de possibilidades adicionais, desde novos tipos de móveis e roupas até alterações na jogabilidade e novos sistemas de interação. <br> <br> Os mods podem transformar profundamente a experiência de jogo, introduzindo novas mecânicas, expandindo histórias e oferecendo opções criativas que vão além do que é oferecido pelo jogo base e pelas expansões oficiais. Os criadores frequentemente compartilham seus mods em fóruns e plataformas online, como o The Sims Resource e o ModTheSims, oferecendo aos jogadores a oportunidade de personalizar ainda mais seus mundos e personagens.
+						</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="containerLateral">
+					<div class="containerAvaliacoes">
+						<div class="cardAvaliacoes">
+							<img class="imgUser1" src="./img/vivian/the-sims-4-user1.jpeg" alt ="User">
+							<div class="exemploDeAvaliacao">
+								<div class="notaAvaliacao">
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota Ruim"></div>
+									<div class="iconeNota Ruim"></div>
+								</div>
+								<div class="textoUser">
+									<h3>Max.0901</h3>
+									<p>"Não é meu estilo favorito de jogo, o que salva é o modo construção"</p>
+								</div>
+							</div>
+						</div>
+						<div class="cardAvaliacoes">
+							<img class="imgUser2" src="./img/vivian/the-sims-4-user2.jpeg" alt="User">
+							<div class="exemploDeAvaliacao">
+								<div class="notaAvaliacao">
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+								</div>
+								<div class="textoUser">
+									<h3>Mrs_Leah123</h3>
+									<p>"Eu adorei esse jogo, muitooo legal XD</p>
+								</div>
+							</div>
+						</div>
+						<div class="cardAvaliacoes">
+							<img class="imgUser3" src="./img/vivian/the-sims-4-user3.jpeg" alt="User">
+							<div class="exemploDeAvaliacao">
+								<div class="notaAvaliacao">
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+									<div class="iconeNota"></div>
+								</div>
+								<div class="textoUser">
+									<h3>HannahMtc_10</h3>
+									<p>"Meu jogo da vida, jogo desde o primeiro que lançou</p>
+								</div>
+						</div>
+					</div>
+				</div>
+				<div class="extra">
+					<div class="galeriaDeFotos">
+						<h2 class="tituloGaleria"></h2>
+						<h2>G A L E R I A</h2>
+						<img class="foto1" src="./img/vivian/the-sims-4-personalizacao-de-sim.webp">
+						<img class="foto2" src="./img/vivian/the-sims-4-construcao.webp">
+						<img class="foto3" src="./img/vivian/the-sims-4-gameplay-galeria.jpg">
+						<img id="seta" src="./img/vivian/icons8-seta-para-baixo-50.png">
+					</div>
+				</div>
+				</div>
+				</div>
+				</section>
 
-                <p>The Sims 4 é um jogo de simulação de vida da <b>Maxis</b>, lançado pela <b>Eletronic Arts</b> em setembro de 2014. 
-                    Nesse incrível jogo, você poderá criar e controlar personagens virtuais, gerenciando todos os aspectos de suas vidas, 
-                    desde a aparência e personalidades até suas casas e carreiras. O jogo é famoso por sua vasta personalização e liberdade criativa. 
-                    Com várias expansões e pacotes de conteúdo, The Sims 4 continua a evoluir, adicionando novos recursos, objetos e experiências. 
-                    É uma plataforma aberta onde você pode contar suas próprias histórias e explorar infinitas possibilidades sociais.
-                </p>
-                <hr>
-            </div>
-            
-            <div>
-                <h2>Avaliações</h2>
-                
-                <p>"É um bom jogo para quem gosta de construir"</p>
-                <hr>
-                <p>"Não é meu estilo favorito de jogo"</p>
-                <hr>
-                <p>"Meu jogo da vida, jogo desde o primeiro que lançou"</p>
-           </div>
-        </section>
-
-        <footer style="background-color: rgb(122, 72, 254)">
-			<img src="img/raven_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/smartphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/thumb_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/photo_camera_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<h2>Quem somos</h2>
+        <footer class="rodape">
+			<img class= "iconesRedes" src="./img/footer/footer-icons-twitterx.png" alt="iconeX"/>
+			<img class="iconesRedes" src="./img/footer/footer-icons-mensagem.png" alt="iconeCelular" />
+			<img class="iconesRedes" src="./img/footer/footer-icons-facebook.png" alt="iconeFacebook"/>
+			<img class="iconesRedes" src="./img/footer/footer-icone-instagram.png" alt="iconeInstagram"/>
+			<p>
+				<a href="#quem-somos" class="link-rodape">Quem Somos</a> | &copy; Games em Pauta - 2024. Todos os direitos reservados.
+			</p>
+			
 		</footer>
 	</body>
 </html>
