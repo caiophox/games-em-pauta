@@ -41,16 +41,36 @@
 					</button>
 			</div>
 			<div class="opcoesUser">
-				<div class="opcao">
+				<label for="togglePopup" class="opcao">
 					<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
 					<span>Minha Conta</span>
-				</div>
+				</label>
 				<div class="opcao">
 					<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
 					<span>Meu Carrinho</span>
 				</div>
 			</div>
 			</header>
+
+			<input type="checkbox" id="togglePopup" class="toggle-popup">
+
+			<div id="popup" class="popup-container">
+				<div class="popup-content">
+					<label for="togglePopup" class="close-button">&times;</label>
+					<h2>Login</h2>
+					<form>
+						<div class="input-group">
+							<label for="email">E-mail:</label>
+							<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
+						</div>
+						<div class="input-group">
+							<label for="senha">Senha:</label>
+							<input type="password" id="senha" name="senha" required>
+						</div>
+						<button type="submit">Entrar</button>
+					</form>
+				</div>
+			</div>
         
         <section class="principal">
             <div class="containerReview">
