@@ -21,26 +21,36 @@
 	</head>
 	<body>
 		<header>
-			<a href="index.html">
-				<img src="./img/logo.svg" alt="Logo Gamesempauta" />
-			</a>
-			<a href="caio.html">Caio</a>
-			<a href="erika.html">Erika</a>
-			<a href="priscilla.html">Priscilla</a>
-			<a href="vitor.html">Vitor</a>
-			<a href="vivian.html">Vívian</a>
-			<input type="search" placeholder="Pesquise no site" />
-			<img src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img
-				src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-			/>
-			<img
-				src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-			/>
+			<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a#>
+					<nav class="menu">
+						<a href="caio.html">Caio</a>
+						<a href="erika.html">Erika</a>
+						<a href="priscilla.html">Priscilla</a>
+						<a href="vitor.html">Vitor</a>
+						<a href="vivian.html">Vívian</a>
+					</nav>
+	
+				<div class="searchBarra">
+						<input type="search" placeholder="Pesquise no site" />
+						<button class="search-button">
+							<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
+						</button>
+				</div>
+				<div class="opcoesUser">
+					<div class="opcao">
+						<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+						<span>Minha Conta</span>
+					</div>
+					<div class="opcao">
+						<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+						<span>Meu Carrinho</span>
+					</div>
+			</div>
 		</header>
+
 		<section class="principal">
-			<div class="containerreview">
-				<div class="cardreview">
+			<div class="containerReview">
+				<div class="cardReview">
 					<div class="cortaconteudo">
 						<p class="tituloreview">Brookhaven</p>
 							<h6 class="autor-review">por Lenon Klein</h6>
@@ -53,7 +63,7 @@
 							</div>	
 					</div>
 				</div>
-				<div class="cardreview">
+				<div class="cardReview">
 					<div class="cortaconteudo">
 					  <p class="tituloreview">Anime Defenders</p>
 					 	 <h6 class="autor-review">por Alicia Gusmão</h6>
@@ -71,18 +81,15 @@
 			<div class="containernoticiatitulo">
 				<div class="containernoticia">
 					<div class="cardnoticia">
-						<div class="cortaconteudo">
 							<h2 class="titulonoticia">Como ganhar Robux?</h2>
-							<p class="textonoticia">Provavelmente a forma mais "válida" e indicada para ganhar Robux na plataforma, 
+							<p class="textoNoticia">Provavelmente a forma mais "válida" e indicada para ganhar Robux na plataforma, 
 								é ao criar jogos dentro do próprio Roblox.</p>
-						</div>
+						
 					</div>
 					<div class="cardnoticia">
-						<div class="cortaconteudo">
 							<h2 class="titulonoticia">Roblox no PS4 e PS5</h2>
-							<p class="textonoticia">O Roblox chegou ao PS 4 e PS 5 em OUT/2023. O anúncio aconteceu 
+							<p class="textoNoticia">O Roblox chegou ao PS 4 e PS 5 em OUT/2023. O anúncio aconteceu 
 								durante a Roblox Developer Conference (RDC), sediada em San Franscisco.</p>
-						</div>
 					</div>
 				</div>
 				<div class="titulo">
@@ -92,28 +99,29 @@
 
 			<div class="containermain">
 				<div class="livre">
-					<h2>Origem do Roblox</h2>
-					   <p>Roblox é uma plataforma em que os jogadores podem criar games baseados em sua criatividade, 
-						  além de explorar as invenções de outros usuários gratuitamente. Apesar de ser um sucesso 
-						  mundial, com milhões de jogadores ativos por mês e milhares de games na biblioteca, a 
-						  origem de Roblox ainda é desconhecida para alguns.</p>
-						<img class="logoroblox" src="img/robloxlogo.webp" alt="logoroblox">
-						<h2>Uma plataforma de ensino que virou criação de games</h2>
-						<p>Roblox foi desenvolvido por David Baszucki e Erick Cassel com um objetivo: transformar o 
-							aprendizado de crianças pela física em algo que despertasse o interesse dos jovens. 
-							Inicialmente, a plataforma contava com formas de criar objetos e ensinar através da 
-							mecânica de criação. Chamado DynaBlocks, a primeira versão do game foi projetada em 2004 e, 
-							um ano depois de seu desenvolvimento, resolveram mudar para o nome atual, sendo o mesmo 
-							da Roblox Corporation. Uma versão baseada no conceito original de Roblox está disponível 
-							para os jogadores testarem na própria plataforma. Baszucki ainda explica que o conceito de 
-							Roblox é mais antigo do que isso, sendo baseado em outro software usado para física em 2D, 
-							criado em 1989.</p>
-							<h2>Criadores de games podem lucrar com microtransações</h2>
-							<p>Roblox é uma plataforma de jogos que conta com mais de 200 milhões de usuários ativos mensalmente,
-							   sendo a maioria formada por crianças. Esses títulos são criados e publicados pelos próprios usuários, 
-							   que podem até mesmo ganhar dinheiro ao incluir microtransações pagas com Robux, a moeda virtual do serviço.</p>
-							<p>Caso o jogo faça sucesso, o criador ainda vai ter mais um obstáculo: fazer as pessoas gastarem Robux em microtransações.</p>
-					
+					<div class="textoLivre">
+						<h2>Origem do Roblox</h2>
+						<p>Roblox é uma plataforma em que os jogadores podem criar games baseados em sua criatividade, 
+							além de explorar as invenções de outros usuários gratuitamente. Apesar de ser um sucesso 
+							mundial, com milhões de jogadores ativos por mês e milhares de games na biblioteca, a 
+							origem de Roblox ainda é desconhecida para alguns.</p>
+							<img class="logoroblox" src="img/robloxlogo.webp" alt="logoroblox">
+							<h2>Uma plataforma de ensino que virou criação de games</h2>
+							<p>Roblox foi desenvolvido por David Baszucki e Erick Cassel com um objetivo: transformar o 
+								aprendizado de crianças pela física em algo que despertasse o interesse dos jovens. 
+								Inicialmente, a plataforma contava com formas de criar objetos e ensinar através da 
+								mecânica de criação. Chamado DynaBlocks, a primeira versão do game foi projetada em 2004 e, 
+								um ano depois de seu desenvolvimento, resolveram mudar para o nome atual, sendo o mesmo 
+								da Roblox Corporation. Uma versão baseada no conceito original de Roblox está disponível 
+								para os jogadores testarem na própria plataforma. Baszucki ainda explica que o conceito de 
+								Roblox é mais antigo do que isso, sendo baseado em outro software usado para física em 2D, 
+								criado em 1989.</p>
+								<h2>Criadores de games podem lucrar com microtransações</h2>
+								<p>Roblox é uma plataforma de jogos que conta com mais de 200 milhões de usuários ativos mensalmente,
+								sendo a maioria formada por crianças. Esses títulos são criados e publicados pelos próprios usuários, 
+								que podem até mesmo ganhar dinheiro ao incluir microtransações pagas com Robux, a moeda virtual do serviço.</p>
+								<p>Caso o jogo faça sucesso, o criador ainda vai ter mais um obstáculo: fazer as pessoas gastarem Robux em microtransações.</p>
+					</div>	
 				</div>
 
 				<div class="containerlateral">
@@ -163,17 +171,19 @@
 							</div>
 						</div>
 					</div>
-				
 				</div>	
 			</div>
 		</section>
 
-		<footer style="background-color: rgb(122, 72, 254)">
-			<img src="img/raven_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/smartphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/thumb_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/photo_camera_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<h2>Quem somos</h2>
+		<footer class="rodape">
+			<img class= "iconesRedes" src="./img/footer/footer-icons-twitterx.png" alt="iconeX"/>
+			<img class="iconesRedes" src="./img/footer/footer-icons-mensagem.png" alt="iconeCelular" />
+			<img class="iconesRedes" src="./img/footer/footer-icons-facebook.png" alt="iconeFacebook"/>
+			<img class="iconesRedes" src="./img/footer/footer-icone-instagram.png" alt="iconeInstagram"/>
+			<p>
+				<a href="#quem-somos" class="link-rodape">Quem Somos</a> | &copy; Games em Pauta - 2024. Todos os direitos reservados.
+			</p>
+			
 		</footer>
 	</body>
 </html>
