@@ -20,12 +20,43 @@ const authorAvalia = document.querySelectorAll('.textoAvalia h3');
 const textAvalia = document.querySelectorAll('.textoAvalia p');
 const titleFree = document.querySelectorAll('.textoLivre h2');
 const textFree = document.querySelectorAll('.textoLivre p');
+const stickyLogo = document.getElementById('stickyLogo');
+const videoLoop = document.getElementById('videoLoop');
+const stickyImg = document.querySelector('.stickyJogo');
+const priceColor = document.querySelectorAll('.advertisement');
+const adsImg1 = document.getElementById('adsImg1');
+const adsImg2 = document.getElementById('adsImg2');
+const adsImg3 = document.getElementById('adsImg3');
+const adsImg4 = document.getElementById('adsImg4');
+const adsImg5 = document.getElementById('adsImg5');
+const adsImg6 = document.getElementById('adsImg6');
+const textPrice = document.querySelectorAll('.adsText');
 
 buttonFactorio.addEventListener('click', function () {
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
 		// Change the src of the img elements
+		textPrice[0].innerText = 'Biter de pelúcia\nR$ 15,99';
+		textPrice[1].innerText = 'Refrigerante de lava\nR$ 12,99';
+		textPrice[2].innerText = 'Spidertron miniatura\nR$ 155';
+		textPrice[3].innerText = 'Carregador de celular\nR$ 40';
+		textPrice[4].innerText = 'Isqueiro elétrico\nR$ 18,99';
+		textPrice[5].innerText = 'Almofada de mofo\nR$ 35';
+		priceColor.forEach(element => {
+			element.classList.add('gradFactorio');
+			element.classList.remove('gradHardspace');
+			element.classList.remove('gradCyberpunk');
+		});
+		adsImg1.src = 'img/caio/factorio/Ad1.webp';
+		adsImg2.src = 'img/caio/factorio/Ad2.webp';
+		adsImg3.src = 'img/caio/factorio/Ad3.webp';
+		adsImg4.src = 'img/caio/factorio/Ad4.webp';
+		adsImg5.src = 'img/caio/factorio/Ad5.webp';
+		adsImg6.src = 'img/caio/factorio/Ad6.webp';
+		videoLoop.classList.add('videoLoopOff');
+		stickyLogo.src = 'img/caio/factorio/FactorioLogo.png';
+		stickyImg.style.backgroundImage = 'url(../img/caio/factorio/Rocket.png)';
 		tituloLogo.src = 'img/caio/factorio/FactorioLogo.png';
 		reflection.src = 'img/caio/factorio/FactorioLogo.png';
 		favicon.href = 'img/caio/factorio/Factorio.ico';
@@ -74,7 +105,13 @@ buttonFactorio.addEventListener('click', function () {
 			'Com a expansão "Space Age" no horizonte, o futuro de Factorio parece mais promissor do que nunca. Esta atualização promete adicionar uma nova camada de complexidade ao jogo, permitindo que os jogadores explorem e colonizem outros planetas. Isso abrirá novas oportunidades para a exploração de recursos e a construção de fábricas em diferentes ambientes. A expansão também trará novas tecnologias e desafios, incluindo a necessidade de gerenciar múltiplas fábricas em planetas distintos.\n\n Além da expansão, a comunidade de Factorio é incrivelmente ativa, com mods que ampliam e modificam o jogo de várias maneiras. Desde novos sistemas de transporte até alterações na mecânica de combate, esses mods permitem aos jogadores personalizar sua experiência de jogo de maneira significativa. Com uma base de fãs dedicada e uma equipe de desenvolvimento comprometida, Factorio está preparado para continuar evoluindo e oferecendo novos desafios para seus jogadores. Se você ainda não experimentou este jogo incrível, agora é o momento perfeito para embarcar nesta jornada de automação e descoberta.';
 		icons.forEach(element => {
 			element.classList.remove('iconHardspace');
+			element.classList.add('iconFactorio');
+			element.classList.remove('iconCyberpunk');
+			element.classList.remove('notaRuim');
+			element.classList.remove('notaMedia');
 		});
+		icons[9].classList.add('notaMedia');
+		icons[14].classList.add('notaMedia');
 
 		// Hide the loading overlay after the images have changed
 		setTimeout(function () {
@@ -88,6 +125,29 @@ buttonHardspace.addEventListener('click', function () {
 
 	setTimeout(function () {
 		// Change the src of the img elements
+		textPrice[0].innerText = 'Chips de batata sintética\nR$ 177';
+		textPrice[1].innerText =
+			'Seguro de vida (radiação apenas)\nR$ 12.499\n p/ semana';
+		textPrice[2].innerText = 'Nave miniatura\nR$ 370.990\n 12cmX14cm';
+		textPrice[3].innerText =
+			'Mini poster de nave miniatura\nR$ 43,98\n 120mmX140mm';
+		textPrice[4].innerText = 'Cópia original do poster\nR$ 380';
+		textPrice[5].innerText =
+			'Processo seletivo L.Y.N.X.\nR$ 23.600\npor tentativa';
+		priceColor.forEach(element => {
+			element.classList.add('gradHardspace');
+			element.classList.remove('gradCyberpunk');
+			element.classList.remove('gradFactorio');
+		});
+		adsImg1.src = 'img/caio/hardspace/Ad1.webp';
+		adsImg2.src = 'img/caio/hardspace/Ad2.webp';
+		adsImg3.src = 'img/caio/hardspace/Ad3.webp';
+		adsImg4.src = 'img/caio/hardspace/Ad4.webp';
+		adsImg5.src = 'img/caio/hardspace/Ad5.webp';
+		adsImg6.src = 'img/caio/hardspace/Ad6.webp';
+		videoLoop.classList.add('videoLoopOff');
+		stickyLogo.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
+		stickyImg.style.backgroundImage = 'url(../img/caio/hardspace/Rookie.png)';
 		tituloLogo.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
 		reflection.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
 		favicon.href = 'img/caio/hardspace/Hardspace.ico';
@@ -137,7 +197,17 @@ buttonHardspace.addEventListener('click', function () {
 			'O futuro de Hardspace Shipbreaker parece promissor, com a Blackbird Interactive já planejando novas atualizações e conteúdos adicionais. Expansões que incluem novos tipos de naves, ferramentas e ambientes são esperadas, ampliando ainda mais o escopo e a profundidade do jogo. A comunidade de jogadores é ativa e dedicada, contribuindo com sugestões e feedback que ajudam a moldar o desenvolvimento futuro do jogo.\n\n A possibilidade de mods e conteúdos criados pela comunidade também pode trazer novas dimensões ao jogo, oferecendo desafios e missões personalizadas. Com uma base de fãs apaixonada e um desenvolvedor comprometido, Hardspace Shipbreaker está bem posicionado para continuar evoluindo e proporcionando novas e emocionantes experiências de desmontagem espacial. Se você ainda não explorou os desafios deste simulador único, agora é o momento perfeito para mergulhar no mundo de Hardspace Shipbreaker.';
 		icons.forEach(element => {
 			element.classList.add('iconHardspace');
+			element.classList.remove('iconFactorio');
+			element.classList.remove('iconCyberpunk');
+			element.classList.remove('notaRuim');
+			element.classList.remove('notaMedia');
 		});
+		icons[4].classList.add('notaMedia');
+		icons[7].classList.add('notaMedia');
+		icons[8].classList.add('notaRuim');
+		icons[9].classList.add('notaRuim');
+		icons[13].classList.add('notaMedia');
+		icons[14].classList.add('notaRuim');
 
 		// Hide the loading overlay after the images have changed
 		setTimeout(function () {
@@ -152,10 +222,83 @@ buttonCyberpunk.addEventListener('click', function () {
 
 	setTimeout(function () {
 		// Change the src of the img elements
+		textPrice[0].innerText = 'Casaco de pele SythSkin\nR$ 15.460';
+		textPrice[1].innerText = 'Segurança particular\nR$ 3.000\n p/dia';
+		textPrice[2].innerText = 'Munição para Kenshin JKE-X2\nR$ 132*\n*cada bala';
+		textPrice[3].innerText = 'Braço mecânico usado\nR$ 43.500';
+		textPrice[4].innerText = 'Combustível comestível\nR$ 38,99/L';
+		textPrice[5].innerText = 'Camiseta Avante\nR$ 340.420,80';
+		priceColor.forEach(element => {
+			element.classList.add('gradCyberpunk');
+			element.classList.remove('gradHardspace');
+			element.classList.remove('gradFactorio');
+		});
+		adsImg1.src = 'img/caio/cyberpunk/Ad1.webp';
+		adsImg2.src = 'img/caio/cyberpunk/Ad2.webp';
+		adsImg3.src = 'img/caio/cyberpunk/Ad3.webp';
+		adsImg4.src = 'img/caio/cyberpunk/Ad4.webp';
+		adsImg5.src = 'img/caio/cyberpunk/Ad5.webp';
+		adsImg6.src = 'img/caio/cyberpunk/Ad6.webp';
+		videoLoop.classList.add('videoLoopOff');
+		stickyLogo.src = 'img/caio/cyberpunk/CyberpunkLogo2.png';
+		stickyImg.style.backgroundImage = 'url(../img/caio/cyberpunk/Songbird.png)';
 		tituloLogo.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
 		reflection.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
 		favicon.href = 'img/caio/cyberpunk/Cyberpunk.ico';
-
+		imgReview1.src = 'img/caio/cyberpunk/CyberpunkReview1.png';
+		imgReview2.src = 'img/caio/cyberpunk/CyberpunkReview2.webp';
+		titleReview[0].innerText = 'Phantom Liberty';
+		titleReview[1].innerText = 'A música de Cyberpunk 2077';
+		authorReview[0].innerText = 'por Erika Menezes';
+		authorReview[1].innerText = 'por Duda Ribeiro';
+		textReview[0].innerText =
+			'A expansão Phantom Liberty para Cyberpunk 2077 é uma verdadeira revolução para o jogo. Oferecendo uma nova área vasta e rica em detalhes, ela expande o universo de Night City com uma narrativa profunda e envolvente. A adição de novos personagens e missões eleva a experiência a um novo patamar, enquanto a mecânica aprimorada e os gráficos deslumbrantes mostram um desenvolvimento meticuloso. É um mergulho emocionante e obrigatório para qualquer fã do jogo que deseja explorar ainda mais o lado sombrio e fascinante da cidade.';
+		textReview[1].innerText =
+			'Lizzie Wizzie, interpretada pela talentosa Grimes, é uma das grandes estrelas de Cyberpunk 2077, e suas músicas no jogo são simplesmente incríveis. A combinação de estilo futurista e som envolvente faz dela uma personagem inesquecível. As faixas adicionam uma vibração autêntica ao ambiente de Night City, refletindo perfeitamente o espírito do jogo. Se você ainda não ouviu as músicas da Lizzie, está perdendo uma parte essencial da experiência sonora de Cyberpunk!';
+		titleNews[0].innerText = 'Armas Cyberpunk Reais';
+		titleNews[1].innerText = 'Implantes Oculares Futuristas';
+		textNews[0].innerText =
+			'Compre armas de plástico que atiram munições de verdade no supermercado de sua preferência. Inspiradas no universo de Cyberpunk 2077, a nova linha de produtos traz uma mistura ousada de letalidade e acessibilidade.';
+		textNews[1].innerText =
+			'Microsoft e CD Projekt Red estão desenvolvendo implantes oculares que prometem um zoom de até 80x dentro do seu olho controlado pelo seu celular, trazendo um pedaço do mundo de Cyberpunk 2077 para o seu cotidiano.';
+		imgUser1.src = 'img/caio/cyberpunk/CyberpunkUser1.jpg';
+		imgUser2.src = 'img/caio/cyberpunk/CyberpunkUser2.jpg';
+		imgUser3.src = 'img/caio/cyberpunk/CyberpunkUser3.jpg';
+		authorAvalia[0].innerText = 'cpt_nascimento2077';
+		authorAvalia[1].innerText = 'caçadora_de_quests';
+		authorAvalia[2].innerText = 'PilotoNoturno';
+		textAvalia[0].innerText =
+			'Se você é fanático por armas, Cyberpunk 2077 é um prato cheio. A diversidade de armamentos e a carnificina no jogo são de tirar o fôlego. Cada arma é única e a sensação de combate é visceral. Adoro como o jogo traz um arsenal tão variado e detalhado, oferecendo um verdadeiro paraíso para quem curte uma boa batalha!';
+		textAvalia[1].innerText =
+			'Cyberpunk 2077 é um tesouro para quem ama histórias profundas e escolhas difíceis. Cada missão é uma nova camada de complexidade e emoção. As decisões que você toma realmente afetam o desenrolar da trama e os personagens são incrivelmente bem desenvolvidos. É um jogo que faz você se envolver emocionalmente de maneiras surpreendentes.';
+		textAvalia[2].innerText =
+			'Dirigir por Night City é a melhor parte de Cyberpunk 2077! Como streamer, adoro explorar a cidade e ver as paisagens urbanas enquanto sigo pelas ruas. O jogo oferece uma experiência incrível de direção, com uma sensação autêntica de velocidade e controle. É um divertimento garantido, especialmente para quem gosta de passeios virtuais!';
+		titleFree[0].innerText = 'O Renascimento Brilhante de Cyberpunk 2077';
+		titleFree[1].innerText = 'Phantom Liberty: A Revolução em Expansão';
+		titleFree[2].innerText = 'Adulto, Audacioso e Único: Cyberpunk em Destaque';
+		titleFree[3].innerText = 'Visuais Impressionantes: Um Show de Gráficos';
+		titleFree[4].innerText = 'Estrelas no Jogo: Realidade e Fama';
+		textFree[0].innerText =
+			'Apesar do lançamento conturbado, a CD Projekt Red deu a volta por cima e transformou Cyberpunk 2077 em um sucesso estrondoso. Desde o seu lançamento problemático, a desenvolvedora tem se dedicado a corrigir os problemas e a oferecer atualizações consistentes. O resultado é um jogo que não só recuperou sua reputação, mas que também conquistou um lugar de destaque entre os grandes lançamentos. A dedicação e o esforço da equipe são evidentes em cada detalhe, fazendo de Cyberpunk 2077 uma experiência extremamente aclamada e memorável.\n\n Além das melhorias contínuas, a CD Projekt Red implementou um suporte ativo para a comunidade, ouvindo feedback e ajustando o jogo conforme as necessidades dos jogadores. A série de atualizações e correções não só resolveu problemas técnicos, mas também adicionou novos recursos e conteúdos que aprimoraram ainda mais a experiência. A recuperação da reputação do jogo não foi instantânea, mas a transparência e o comprometimento da desenvolvedora ajudaram a reconquistar a confiança dos fãs, transformando Cyberpunk 2077 em um exemplo de recuperação e resiliência na indústria dos games.';
+		textFree[1].innerText =
+			'A expansão Phantom Liberty para Cyberpunk 2077 é como um jogo completamente novo. Com um conteúdo tão robusto e inovador, ela redefine a experiência original com novas áreas, personagens e histórias de tirar o fôlego. A qualidade da expansão é tão impressionante que se destaca como uma obra-prima por si só. Se você achava que Cyberpunk 2077 já era incrível, Phantom Liberty vai elevar suas expectativas a um nível absurdo, com um conteúdo que é essencial para qualquer fã.\n\n O impacto de Phantom Liberty vai além do conteúdo adicional; ela redefine a forma como as expansões podem ser percebidas. A expansão não apenas adiciona novas missões e áreas, mas também melhora significativamente a narrativa e a jogabilidade, proporcionando uma nova perspectiva sobre o mundo de Night City. As adições incluem novos sistemas de jogo e mecânicas que integram de forma impecável com o conteúdo original, criando uma experiência de jogo que se sente fresca e inovadora. Com Phantom Liberty, a CD Projekt Red estabeleceu um novo padrão para expansões, provando que é possível expandir um universo de jogo de maneira significativa e impactante.';
+		textFree[2].innerText =
+			'Cyberpunk 2077 se destaca dos demais jogos do gênero com seu conteúdo adulto e visceral. Com uma variedade impressionante de armas, cenas de violência impactantes e missões que desafiam sua moralidade, o jogo mergulha fundo em temas complexos e provocativos. Essas características não apenas atraem jogadores em busca de ação intensa, mas também aqueles que buscam uma narrativa envolvente e ética. A abordagem audaciosa do jogo é um dos seus maiores trunfos, oferecendo uma experiência que poucos títulos conseguem igualar.\n\n A abordagem madura de Cyberpunk 2077 é complementada por uma trilha sonora e um design sonoro que aprofundam a imersão no ambiente sombrio do jogo. As missões que exploram dilemas morais e as interações intensas com personagens complexos destacam o jogo como uma experiência narrativa profunda e multifacetada. A combinação de violência crua e escolhas éticas difíceis não é apenas um recurso de entretenimento, mas também um convite à reflexão sobre questões sociais e pessoais, elevando Cyberpunk 2077 a um nível de profundidade emocional que poucos outros jogos conseguem alcançar.';
+		textFree[3].innerText =
+			'Cyberpunk 2077 é um dos líderes em qualidade visual no mundo dos videogames. Utilizando tecnologias inovadoras, como a Jali para animação facial, o jogo oferece uma experiência gráfica de tirar o fôlego. A textura da pele e o nível de detalhes são simplesmente superiores, fazendo com que cada cena se sinta incrivelmente realista. A atenção aos detalhes gráficos é um testemunho do compromisso da CD Projekt Red com a excelência, proporcionando uma experiência visual que estabelece um novo padrão para a indústria.\n\n A qualidade visual de Cyberpunk 2077 é acentuada pelo uso de técnicas avançadas de iluminação e renderização, que contribuem para a criação de um ambiente urbano vibrante e detalhado. A integração da tecnologia Jali permite uma expressão facial rica e realista, aumentando a profundidade emocional das interações com os personagens. Além disso, o jogo aproveita ao máximo as capacidades dos consoles de última geração e PCs de alto desempenho, oferecendo uma experiência gráfica que é tanto impressionante quanto inovadora. O compromisso com a excelência visual torna Cyberpunk 2077 um exemplo notável de como a tecnologia pode elevar a experiência de jogo a novos patamares.';
+		textFree[4].innerText =
+			'O elenco de Cyberpunk 2077 é estonteante, com atuações de estrelas como Keanu Reeves, Idris Elba e Grimes. Esses talentos trazem uma autenticidade e profundidade que elevam o jogo a um nível ainda mais envolvente. A presença de tais atores não só enriquece a narrativa, mas também dá ao jogo um brilho extra, com performances que são tão marcantes quanto a própria jogabilidade. A combinação de atuações de alto nível com uma trama cativante faz de Cyberpunk 2077 uma experiência verdadeiramente inesquecível.\n\n A presença de celebridades em Cyberpunk 2077 não é apenas uma jogada de marketing; ela acrescenta uma camada adicional de autenticidade e apelo ao jogo. Keanu Reeves, Idris Elba e Grimes, com suas performances carismáticas, ajudam a dar vida aos personagens de maneiras que vão além do que a maioria dos jogos pode oferecer. Seus talentos não só atraem os fãs, mas também enriquecem a narrativa e o mundo do jogo, criando uma conexão mais profunda entre os jogadores e o universo de Cyberpunk. A participação de tais estrelas eleva o nível de envolvimento e satisfação, fazendo com que Cyberpunk 2077 se destaque como uma experiência de entretenimento de alto nível.';
+		icons.forEach(element => {
+			element.classList.remove('iconHardspace');
+			element.classList.remove('iconFactorio');
+			element.classList.add('iconCyberpunk');
+			element.classList.remove('notaRuim');
+			element.classList.remove('notaMedia');
+		});
+		icons[4].classList.add('notaMedia');
+		icons[8].classList.add('notaMedia');
+		icons[9].classList.add('notaRuim');
+		icons[14].classList.add('notaRuim');
 		setTimeout(function () {
 			loadingOverlay.classList.remove('show');
 		}, 200); // Wait for 1 second before hiding the overlay
