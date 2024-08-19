@@ -89,6 +89,7 @@ h2 {
 .imgTitulo{
 	width: 100%;
 }
+
 #logotipo {
 	font-family: 'Rubik', system-ui;
 	font-weight: 900;
@@ -120,15 +121,14 @@ h2 {
 
 @-webkit-keyframes glow {
 	from {
-		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #e60073,
-			0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #9600e6,
+			0 0 40px #5400e6, 0 0 50px #e60017, 0 0 60px #0092e6, 0 0 70px #e60073;
 	}
 	to {
-		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-			0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #a518f1, 0 0 40px #a518f1,
+			0 0 50px #a518f1, 0 0 60px #a518f1, 0 0 70px #a518f1, 0 0 80px #a518f1;
 	}
 }
-
 
 body {
 	/* Evite alterar */
