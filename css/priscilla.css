@@ -186,7 +186,8 @@ body {
 	height: calc(100% - 50px);
 	width: calc(100% - 50px);
 	margin: 25px;
-	overflow: hidden;
+	text-overflow: ellipsis;
+	/*overflow: hidden;*/
 }
 
 .cortaAval{
@@ -333,7 +334,8 @@ body {
     display: -webkit-box;
 /*	-webkit-line-clamp: 7;*/
 	-webkit-box-orient: vertical;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	text-overflow: ellipsis;
 	font-size: 1rem;
 	text-shadow: 0.1rem 0.1rem #00000040;
 	font-family: 'Roboto', sans-serif;
