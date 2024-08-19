@@ -1,197 +1,629 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Esse é o meu primeiro site" />
-    <meta name="Keywords" content="programação,html,css,javascript" />
-    <meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
-    <title>Super Mario</title>
-</head>
+    <meta name="description" content="Saiba Tudo Sobre Jogos do Mário Bros!" />
+    <meta
+      name="Keywords"
+      content="Jogos, Mário Bros, Luigi, Nintendo, Super Nintendo"
+    />
+    <meta name="author" content="Erika Oliveira" />
+    <title>Super Mario Bros</title>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?
+      family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;
+      1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!--link css-->
+    <link rel="stylesheet" href="css/erika.css" />
+  </head>
 
-<body>
-    <header style="background-color: rgb(122, 72, 254); height: 95px; padding: 10px;">
-        <img src="./img/logo.svg" alt="Logo Gamesempauta"/>
-        <nav>
-            <a href="caio.html">Caio</a>
-            <a href="erika.html">Erika</a>
-            <a href="priscilla.html">Priscilla</a>
-            <a href="vitor.html">Vitor</a>
-            <a href="vivian.html">Vívian</a>
-        </nav>
-        <form>
-            <input type="search" placeholder="Pesquise no site" /><img
-                src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        </form>
+  <body>
+    <header>
+      <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+      <nav class="menu">
+        <a href="caio.html">Caio</a>
+        <a href="erika.html">Mário Bros</a>
+        <a href="priscilla.html">Priscilla</a>
+        <a href="vitor.html">Vitor</a>
+        <a href="vivian.html">Vívian</a>
+      </nav>
 
-        <img src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <img src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
+      <div class="searchBarra">
+        <input type="search" placeholder="Pesquise no site" />
+        <button class="search-button">
+          <img
+            src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Buscar"
+          />
+        </button>
+      </div>
+      <div class="opcoesUser">
+        <div class="opcao">
+          <img
+            src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Minha Conta"
+          />
+          <span>Minha Conta</span>
+        </div>
+        <div class="opcao">
+          <img
+            src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Meu Carrinho"
+          />
+          <span>Meu Carrinho</span>
+        </div>
+      </div>
     </header>
-    <br>
-    <a href="index.html">Voltar</a>
-    <main>
-        <aside>
-            <h1>Avaliações</h1>
-            <img src="img/menina-japonesa.jpg" alt="avaliação">
-            <div>
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-meio-vazia.png" alt="estela meia vazia">
-                <p>Achei um baita downgrad dos dois Mario Galaxy que são obras primas do Mario,
-                    porém esse aqui também é muito bom cara, a franquia Mario é a mais histórica e
-                    uma das melhores também, parabéns Nintendo.
-                </p>
+    <section class="principal">
+      <div class="containerreview">
+        <div class="cardreview">
+          <div class="cortaconteudo">
+            <h2 class="tituloreview">- Super Mário Wonder -</h2>
+            <div class="reviewItens">
+              <img src="img/Mariowonder.jpg" alt="imagem de card review" />
+              <p class="textoreview">
+                Super Mário Bros Wonder é a nova aposta da Nintendo para sua
+                principal estrela em um novo título 2D, estilo que consagrou o
+                personagem e onde a empresa faz escola a cada novo lançamento.
+                Jogo sensacional, muito bem feito, caprichado, fases que nunca
+                se repetem.
+              </p>
             </div>
-            <img src="img/menino.jpg" alt="avaliação">
-            <div>
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <p>Talvez o melhor jogo da franquia super mario bro. Tem vários jogos do wii ruim más esse usa o wii
-                    remote perfeitamente
-                    ao ponto de ser satisfatório pegar star bits. Tem a primeira aparição da rosalina uma das melhores
-                    personagens do mario
-                    galaxy. A trilha sonora dos jogos do mario são todas de auto nivel é esse não e exceção.
-                </p>
+          </div>
+        </div>
+        <div class="cardreview">
+          <div class="cortaconteudo">
+            <h2 class="tituloreview">- Mário Bowser's Fury -</h2>
+            <div class="reviewItens">
+              <img src="img/Bowser_s-Fury.jpg" alt="imagem de card review" />
+              <p class="textoreview">
+                Bowser’s Fury é a mais impressionante das conversões do Wii U
+                para Switch até hoje. O jogo básico ganhou melhorias, como uma
+                movimentação acelerada e suporte ao multiplayer online, e a
+                adição do curioso Bowser’s Fury.Esse e o melhor jogo do super
+                mario do universo infinito.
+              </p>
             </div>
-            <img src="img/criança.jpg" alt="avaliação">
-            <div>
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <img src="img/estrela-cheia.png" alt="estrela cheia">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium delectus beatae a sint
-                    reprehenderit molestiae <br>
-                    tempore adipisci voluptate minus. Minima fuga illum dolore earum, minus officia maiores repellat
-                    error nulla.
-                </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="containernoticiatitulo">
+        <div class="containernoticia">
+          <div class="cardnoticia">
+            <div class="cortaconteudo">
+              <img src="img/luigi-mansion2.jpg" alt="imagem de jogo" />
+              <p class="textonoticia">
+                27.06.2024 - Entre no espírito das rajadas de fantasmas com
+                algumas noções básicas para Luigi's Mansion 2 HD.
+              </p>
             </div>
-            <h1>Compre Agora</h1>
-            <div>
-                <img src="img/manete-mario.png" alt="manete-mario">
-                <h3>Controle com fio Faceoff <br>
-                    Deluxe + Audio: Power Pose Mario</h3>
-                <h4>R$ 139,95</h4>
-                <button>Adicionar ao carrinho</button>
+          </div>
+          <div class="cardnoticia">
+            <div class="cortaconteudo">
+              <img src="img/mario-rpg.jpg" alt="" />
+
+              <p class="textonoticia">
+                23.05.2024 - Junte-se a Mário e um elenco de excêntricos em uma
+                de suas mais estranhas aventuras de RPG!
+              </p>
             </div>
-            <div>
-                <img src="img/boneco-mario.png" alt="boneco-mario">
-                <h3>Mochila de bonecos do mario</h3>
-                <h4>R$ 124,99</h4>
-                <button>Adicionar ao carrinho</button>
+          </div>
+        </div>
+        <div class="titulo">
+          <img
+            src="img/logo-titulo-marioLuigi.png"
+            alt="imagem logo mario e luigi"
+          />
+        </div>
+      </div>
+
+      <div class="containermain">
+        <div class="livre">
+          <h1>Conheça o Mário!</h1>
+          <p class="introducao_p">
+            Se você é fã do Mário — ou mesmo se acabou de descobrir sobre ele
+            hoje — você veio ao lugar certo! Aprenda tudo o que há para saber
+            sobre essa maravilha multitalentosa e bigoduda, e confira as últimas
+            notícias, vídeos e muito mais.
+          </p>
+          <img
+            class="img_mario-estrela"
+            src="img/mario_3.png"
+            alt="imagem do mario bros"
+          />
+          <h2>A História do Super Mário</h2>
+
+          <div class="box-video">
+            <video
+              class="video-nostalgia"
+              src="img/Todos os Jogos do Mario - ordem cronológica.mp4"
+              controls
+              loop
+            ></video>
+          </div>
+          <div class="box_historia-mario">
+            <article>
+              <blockquote>
+                - Plataforma: Nintendo Entertainment System -
+              </blockquote>
+              <p class="historia_p">
+                <cite>Super Mário</cite> é uma série icônica de jogos de
+                plataforma criada pela Nintendo, tendo como protagonista o
+                personagem <strong>Mário</strong>, um encanador italiano.
+                Lançada pela primeira vez em 1985 com o jogo
+                <cite>Super Mário Bros</cite> para a
+                <abbr title="Nintendo Entertainment System">( NES )</abbr>, a
+                série é fundamental para o gênero de plataforma e continua sendo
+                uma das franquias de videogame mais vendidas. Em cada jogo,
+                Mario, muitas vezes acompanhado de seu irmão
+                <strong>Luigi</strong>, embarca em aventuras para salvar a
+                <strong>Princesa Peach</strong> do vilão
+                <strong>Bowser</strong>, atravessando diversos mundos com
+                desafios que incluem pular plataformas e coletar itens.
+              </p>
+            </article>
+          </div>
+          <!------BOX PERSONAGENS--------->
+          <div class="personagens">
+            <div class="box-range">
+              <div class="box-slider1">
+                <img src="img/card-Mario.jpg" alt="imagem de card" />
+                <img src="img/card-Luigi.jpg" alt="imagem de card" />
+                <img src="img/card-Princesa Peach.jpg" alt="imagem de card" />
+                <img src="img/card-Sapo.jpg" alt="imagem de card" />
+                <img src="img/card-Bowser.jpg" alt="imagem de card" />
+                <img src="img/card-Yoshi.jpg" alt="imagem de card" />
+                <img src="img/card-Margarida.jpg" alt="imagem de card" />
+                <img src="img/card-Waluigi.jpg" alt="imagem de card" />
+                <img src="img/card-wario.jpg" alt="imagem de card" />
+                <img src="img/card-Rosalina.jpg" alt="imagem de card" />
+                <img src="img/card-Boweser-Jr.jpg" alt="imagem de card" />
+                <img src="img/card-Vaia.jpg" alt="imagem de card" />
+                <img src="img/card-Donkey-Kong.jpg" alt="imagem de card" />
+                <img src="img/card-Diddy-Kong.jpg" alt="imagem de card" />
+              </div>
             </div>
-            <hr>
-        </aside>
+            <div class="box-animation">
+              <div class="box-placar">
+                <img src="img/coin.png" alt="imagem de moeda" />
+                <span>36</span>
+                <img src="img/mario-espiando.png" alt="imagem do mario" />
+                <span>6</span>
+                <img src="img/coin.png" alt="imagem de moeda" />
+                <span>15</span>
+                <img src="img/luigi.png" alt="imagem do mario" />
+                <span>4</span>
+              </div>
 
-        <section>
-            <h1>Review</h1>
-            <div>
-                <h2>Super Mario Bros Wonder</h2>
-                <img src="img/super-mario-bros-wonder-review.jpg" alt="imagem review">
+              <img
+                class="img-browserjr2"
+                src="img/card-Boweser-Jr2.png"
+                alt=""
+              />
+              <img class="tijolinho" src="img/tijolinho.png" alt="" />
+              <img class="tijolinho2" src="img/tijolinho.png" alt="" />
+              <img
+                class="tijolinho-horizontal"
+                src="img/tijolinho-horizontal.png"
+                alt=""
+              />
+              <img class="star" src="img/star.png" alt="" />
+              <img class="estrelas" src="img/estrelas-varias.png" alt="" />
+              <img class="pipe" src="img/pipe.png" alt="" />
+              <img class="amarelo" src="img/brick-yellow.png" alt="" />
+              <img class="mush" src="img/mush.png" alt="" />
+              <img class="cogumelo" src="img/cogumelo.png" alt="" />
+              <img class="coin coin1" src="img/coin.png" alt="" />
+              <img class="coin coin2" src="img/coin.png" alt="" />
+              <img class="coin coin3" src="img/coin.png" alt="" />
+              <img class="coin coin4" src="img/coin.png" alt="" />
+              <img class="coin coin5" src="img/coin.png" alt="" />
+              <img
+                class="fantasma fantasma1"
+                src="img/fantasma.png"
+                alt="imagem de fantasma1"
+              />
+              <img
+                class="fantasma fantasma2"
+                src="img/fantasma.png"
+                alt="imagem de fantasma2"
+              />
+              <img
+                class="fantasma fantasma3"
+                src="img/fantasma.png"
+                alt="imagem de fantasma3"
+              />
+              <img
+                class="princesa"
+                src="img/princesa.png"
+                alt="imagem da princesa"
+              />
+              <img class="yoshi" src="img/yoshi.png" alt="imagem do yoshi" />
 
-                <p>Super Mario Bros Wonder é a nova aposta da Nintendo para sua principal estrela em um novo título 2D,
-                    estilo que
-                    consagrou o personagem e onde a empresa faz escola a cada novo lançamento.
-                </p>
+              <img
+                class="castelo"
+                src="img/castelo.png"
+                alt="imagem do castelo"
+              />
+
+              <img
+                class="img-cano"
+                src="img/cano-mario.png"
+                alt="imagem de cano"
+              />
+              <img
+                class="img-mario_espiando"
+                src="img/mario-espiando.png"
+                alt="imagem do mário"
+              />
+              <img
+                class="img-luigi_aspirador"
+                src="img/luigi-aspirador.png"
+                alt="imagem de luigi"
+              />
+              <img
+                class="img-vento"
+                src="img/vento.png"
+                alt="imagem de vento"
+              />
             </div>
-            <div>
-                <h2>Super Mario Galaxy</h2>
-                <img src="img/jogo-mario-galaxy.jpg" alt="imagem review">
-
-                <p>Mario Galaxy 2 tem a mesma sensação, na minha opinião, que O Império Contra-Ataca. Ele pega tudo que
-                    tem de bom no
-                    primeiro, coloca algumas coisas a mais, mas sem exagero, e se transforma em algo marcante que nos
-                    faz pensar em tudo que
-                    o anterior poderia/deveria ter sido.
-                </p>
+          </div>
+        </div>
+        <div class="containerlateral">
+          <div class="containeravaliacoes">
+            <div class="cardavaliacoes">
+              <div class="cortaconteudo cortaconteudo_avaliacoes">
+                <div class="box_exemplo">
+                  <img
+                    class="pessoa"
+                    src="img/menina-japonesa.jpg"
+                    alt="avaliação"
+                  />
+                  <div class="box_exemplo1">
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela_vazia.png" alt="estrela vazia" />
+                  </div>
+                </div>
+                <div class="box_exemplo2">
+                  <q>Um baita downgrad!</q>
+                </div>
+              </div>
             </div>
-            <hr>
-            <h1>Notícias</h1>
-            <img src="img/luigi-mansion2.avif" alt="Imagem do Card">
-            <div>
-                <h3>22.06.2024</h3>
-                <p>Ahhh, Evershade Valley. Um lugar sereno e produtivo para o Professor E. Gadd, um excêntrico
-                    pesquisador de
-                    fantasmas e
-                    inventor, trabalhar duro em seus projetos... bem, pelo menos era até que a mágica Dark Moon de
-                    repente se
-                    desfez.
-                    (Sério, quem pode prever algo assim?) Agora, os fantasmas amigáveis ​​que estavam ajudando o
-                    professor de
-                    repente se
-                    tornaram hostis!
-                </p>
+
+            <div class="cardavaliacoes">
+              <div class="cortaconteudo cortaconteudo_avaliacoes">
+                <div class="box_exemplo">
+                  <img class="pessoa" src="img/menino.jpg" alt="avaliação" />
+                  <div class="box_exemplo1">
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                  </div>
+                </div>
+                <div class="box_exemplo2"><q>Adorei o jogo!</q></div>
+              </div>
             </div>
-            <img src="img/super-nintendo-noticia.avif" alt="Imagem do Card">
-            <div>
-                <h3>02.05.2024</h3>
-                <p>O resort Universal Orlando revela novos detalhes emocionantes sobre sua experiência mais colorida e
-                    interativa até agora
-                    – SUPER NINTENDO WORLD – chegando ao Universal Epic Universe em 2025
-                </p>
+
+            <div class="cardavaliacoes">
+              <div class="cortaconteudo cortaconteudo_avaliacoes">
+                <div class="box_exemplo">
+                  <img class="pessoa" src="img/criança.jpg" alt="avaliação" />
+                  <div class="box_exemplo1">
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                    <img src="img/estrela-cheia.png" alt="estrela cheia" />
+                  </div>
+                </div>
+                <div class="box_exemplo2"><q>Exelente jogo!!</q></div>
+              </div>
             </div>
-            <hr>
-            <div>
-                <img src="img/logo-titulo.png" alt="logo título">
+          </div>
+          <!-------INPUT type checkbox--------------------->
+
+          <div class="extra">
+            <h2 class="extra-titulo">- Loja Oficial -</h2>
+            <div class="nav_compra">
+              <h2>Produtos</h2>
+              <label for="input_manete">Manete</label>
+              <label for="input_boneco">Boneco</label>
+              <label for="input_camisa">Camisa</label>
+              <label for="input_relogio">Relógio</label>
+              <label for="input_console">Console</label>
+
+              <input type="checkbox" id="input_manete" />
+              <div
+                class="box-card_compra box-card_compraTop"
+                id="box-card_compra1"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_manete">X</label>
+                  <img src="img/manete!.png" alt="manete-mario" />
+                  <description>
+                    <p>Manete Fio Faceoff e Acompanha 2 Pilhas.</p>
+                    <span>R$ 534,95</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_boneco" />
+              <div
+                class="box-card_compra box-card_compraTop"
+                id="box-card_compra2"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_boneco">X</label>
+                  <img src="img/bonecos.png" alt="boneco-mario" />
+                  <description>
+                    <p>Boneco Articulado Super Mário Com Som</p>
+                    <span>R$ 299,79 Cada!</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_camisa" />
+              <div
+                class="box-card_compra box-card_compraTop"
+                id="box-card_compra3"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_camisa">X</label>
+                  <img src="img/camisa.png" alt="camisa-mario" />
+                  <description>
+                    <p>Camisa Mário- P, M, G Todas as Cores!</p>
+                    <span>R$ 136,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_relogio" />
+              <div
+                class="box-card_compra box-card_compraTop"
+                id="box-card_compra4"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_relogio">X</label>
+                  <img src="img/relogio.png" alt="relogio-mario" />
+                  <description>
+                    <p>Relógio Suiço Smartwatch Tag Heuer</p>
+                    <span>R$ 11.064,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_console" />
+              <div
+                class="box-card_compra box-card_compraTop"
+                id="box-card_compra5"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_console">X</label>
+                  <img src="img/console.png" alt="console-mario bros" />
+                  <description>
+                    <p>Console Nintendo Switch - Azul e Vermelho Neon</p>
+                    <span>R$ 2.199,90</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
             </div>
-            <hr>
-        </section>
+            <!--------SEGUNDA ESTRUTURA INPUT-->
 
-        <section>
-            <h1>Conheça o Mario ?</h1>
-            <p>Se você é fã do Mario — ou mesmo se acabou de descobrir sobre ele hoje — você veio ao lugar certo!
-                Aprenda tudo o que há
-                para saber sobre essa maravilha multitalentosa e bigoduda, e confira as últimas notícias, vídeos e muito
-                mais.
-            </p>
-            <img src="img/mario 3.png" alt="">
-            <h2>A história do Super Mario</h2>
-            <div>
-                <video src="img/Todos os Jogos do Mario - ordem cronológica.mp4" controls muted loop></video>
+            <div class="nav_compra">
+              <h2>Jogos</h2>
+              <label for="input_galaxy">Galaxy</label>
+              <label for="input_mansion">Mansion Luigi 2</label>
+              <label for="input_party">Mário Party</label>
+              <label for="input_princesa">Princesa Peach</label>
+              <label for="input_kart">Kart Deluxe</label>
+
+              <input type="checkbox" id="input_galaxy" />
+              <div
+                class="box-card_compra box-card_compraDown"
+                id="box-card_compra6"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_galaxy">X</label>
+                  <img src="img/jogo-mario-galaxy.jpg" alt="imagen de jogo" />
+                  <description>
+                    <p>Atravesse Diversos Mundos e Desafios</p>
+                    <span>R$ 88,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_mansion" />
+              <div
+                class="box-card_compra box-card_compraDown"
+                id="box-card_compra7"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_mansion">X</label>
+                  <img src="img/luigi-mansion2.jpg" alt="imagen de jogo" />
+                  <description>
+                    <p>Use o Cupom e Ganhe 10% de Desconto!</p>
+                    <del>R$ 97,88</del><span>R$ 88,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_party" />
+              <div
+                class="box-card_compra box-card_compraDown"
+                id="box-card_compra8"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_party">X</label>
+                  <img src="img/mario_party.jpg" alt="imagen de jogo" />
+                  <description>
+                    <p>Divirta-se com Toda a Família e Aminhos!</p>
+                    <span>R$ 74,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+
+              <input type="checkbox" id="input_princesa" />
+              <div
+                class="box-card_compra box-card_compraDown"
+                id="box-card_compra9"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_princesa">X</label>
+                  <img src="img/princesa-peach.jpg" alt="imagen de jogo" />
+                  <description>
+                    <p>Salve a Princesa, Jogo Multiplayer!</p>
+                    <span>R$ 72,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
+              <input type="checkbox" id="input_kart" />
+              <div
+                class="box-card_compra box-card_compraDown"
+                id="box-card_compra10"
+              >
+                <div class="box_itens-compra">
+                  <label id="label-x" for="input_kart">X</label>
+                  <img src="img/deluxe.png" alt="imagen de jogo" />
+                  <description>
+                    <p>Seja Poly Position com Kart Deluxe!</p>
+                    <span>R$ 108,99</span>
+                  </description>
+                </div>
+                <div class="box_botao">
+                  <button class="botao">
+                    <img
+                      class="img_botao"
+                      src="img/carrinho-verde.jpg"
+                      alt="carrinho"
+                    />Adicionar ao carrinho
+                  </button>
+                </div>
+              </div>
             </div>
-            <p>
-            <h3>Lançado: 18 de outubro de 1985</h3>
-            <h4> Plataforma: Nintendo Entertainment System</h4>
-            Um dia, o reino do pacífico povo cogumelo foi invadido pelos Koopa, uma tribo de tartarugas famosa por sua
-            magia negra.
-            O tranquilo e pacífico Povo Cogumelo foi transformado em meras pedras, tijolos e até mesmo plantas de crina
-            de cavalo, e
-            o Reino Cogumelo caiu em ruínas.
+          </div>
+        </div>
+      </div>
+    </section>
 
-            A única que pode desfazer o feitiço mágico no Povo Cogumelo e devolvê-los ao seu eu normal é a Princesa
-            Toadstool, a
-            filha do Rei Cogumelo. Infelizmente, ela está atualmente nas mãos de Bowser, o Rei dos Koopa.
-
-            Mario ouve sobre a situação difícil do Povo Cogumelo e parte em uma jornada para libertar a Princesa
-            Cogumelo do maligno
-            Koopa e restaurar o reino caído do Povo Cogumelo.
-
-            Você é Mario! Cabe a você salvar o Povo Cogumelo da magia negra dos Koopa!
-            </p>
-            <hr>
-            <img src="img/luigi.png" alt="luigi">
-            <img src="img/pipe.png" alt="">
-        </section>
-
-
-
-
-    </main>
-
-    <footer style="background-color: rgb(122, 72, 254)">
-        <img src="img/raven_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <img src="img/smartphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <img src="img/thumb_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <img src="img/photo_camera_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <h2>Quem somos</h2>
+    <footer class="rodape">
+      <img
+        class="iconesRedes"
+        src="./img/footer/footer-icons-twitterx.png"
+        alt="iconeX"
+      />
+      <img
+        class="iconesRedes"
+        src="./img/footer/footer-icons-mensagem.png"
+        alt="iconeCelular"
+      />
+      <img
+        class="iconesRedes"
+        src="./img/footer/footer-icons-facebook.png"
+        alt="iconeFacebook"
+      />
+      <img
+        class="iconesRedes"
+        src="./img/footer/footer-icone-instagram.png"
+        alt="iconeInstagram"
+      />
+      <p>
+        <a href="#quem-somos" class="link-rodape">Quem Somos</a> | &copy; Games
+        em Pauta - 2024. Todos os direitos reservados.
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
