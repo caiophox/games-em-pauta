@@ -344,7 +344,7 @@ body {
 	background-size: contain;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 60px;
+	top: 100px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
@@ -597,7 +597,7 @@ header {
 	background-color: #00000099;
 	z-index: 255;
 	backdrop-filter: blur(4px);
-	height: 60px;
+	height: 100px;
 }
 
 .headerLogo,
@@ -605,6 +605,11 @@ header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	width: fit-content;
+}
+
+.headerLogo {
+	margin-left: 110px;
 }
 
 .menu {
@@ -666,6 +671,7 @@ header {
 	text-decoration: none;
 	color: white;
 	margin: 5px;
+	font-weight: 600;
 }
 
 @media (max-width: 1388px) {
