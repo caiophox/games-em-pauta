@@ -20,6 +20,7 @@ header {
 	width: calc(100% - 20px);
 }
 
+
 .menu {
 	display: flex;
 }
