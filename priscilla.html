@@ -7,113 +7,152 @@
 		<meta name="description" content="Esse é o meu primeiro site" />
 		<meta name="Keywords" content="programação,html,css,javascript" />
 		<meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="css/priscilla.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap" rel="stylesheet"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet"/>
 		<title>Games em Pauta</title>
 	</head>
 	<body>
 		<header>
-			<a href="index.html">
-				<img src="./img/logo.svg" alt="Logo Gamesempauta" />
-			</a>
-			<a href="caio.html">Caio</a>
-			<a href="erika.html">Erika</a>
-			<a href="priscilla.html">Priscilla</a>
-			<a href="vitor.html">Vitor</a>
-			<a href="vivian.html">Vívian</a>
-			<input type="search" placeholder="Pesquise no site" />
-			<img src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img
-				src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-			/>
-			<img
-				src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-			/>
+			<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a#>
+					<nav class="menu">
+						<a href="caio.html">Caio</a>
+						<a href="erika.html">Erika</a>
+						<a href="priscilla.html">Roblox</a>
+						<a href="vitor.html">Vitor</a>
+						<a href="vivian.html">Vívian</a>
+					</nav>
+	
+					<div class="searchBarra">
+						<input type="search" placeholder="Pesquise no site" />
+						<button class="search-button">
+							<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
+						</button>
+				</div>
+				<div class="opcoesUser">
+					<label for="togglePopup" class="opcao">
+						<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+						<span>Minha Conta</span>
+					</label>
+					<div class="opcao">
+						<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+						<span>Meu Carrinho</span>
+					</div>
+				</div>
 		</header>
+
+		<input type="checkbox" id="togglePopup" class="toggle-popup">
+
+			<div id="popup" class="popup-container">
+				<div class="popup-content">
+					<label for="togglePopup" class="close-button">&times;</label>
+					<h2>Login</h2>
+					<form>
+						<div class="input-group">
+							<label for="email">E-mail:</label>
+							<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
+						</div>
+						<div class="input-group">
+							<label for="senha">Senha:</label>
+							<input type="password" id="senha" name="senha" required>
+						</div>
+						<button type="submit">Entrar</button>
+					</form>
+				</div>
+			</div>
+
 		<section class="principal">
-			<div class="containerreview">
-				<div class="cardreview">
-					<div class="cortaconteudo">
-						<p class="tituloreview">Brookhaven</p>
+			<div class="containerReview">
+				<div class="cardReview">
+					<div class="cortaConteudo">
+						<p class="tituloReview">Brookhaven</p>
 							<h6 class="autor-review">por Lenon Klein</h6>
 							<div class="review-imagem-texto">
-								<img class="imgreview" src="img/robloxr1.png" alt="robloxpark">
-									<p class="textoreview">
+								<img class="imgReview" src="img/robloxr1.png" alt="robloxpark">
+									<p class="textoReview">
 										Brookhaven é um jogo de role-playing (RP) onde os jogadores podem viver em uma cidade virtual cheia de possibilidades. 
 										Você pode comprar e decorar casas, dirigir carros, trabalhar em diferentes profissões e interagir com outros jogadores.
 									</p>
 							</div>	
 					</div>
 				</div>
-				<div class="cardreview">
-					<div class="cortaconteudo">
-					  <p class="tituloreview">Anime Defenders</p>
+				<div class="cardReview">
+					<div class="cortaConteudo">
+					  <p class="tituloReview">Anime Defenders</p>
 					 	 <h6 class="autor-review">por Alicia Gusmão</h6>
 							<div class="review-imagem-texto">
-							<img class="imgreview" src="img/robloxr2.png" alt="robloxpark">
-							<p class="textoreview">
-								Outro título que merece estar entre os melhores jogos de Roblox de 2024 é o Anime Defenders, é um jogo de defesa baseado em animes. 
-								Nele, os jogadores podem invocar seus heróis favoritos para proteger suas bases contra ondas de inimigos.
+							<img class="imgReview" src="img/robloxr2.png" alt="robloxpark">
+							<p class="textoReview">
+								Outro título que merece estar entre os melhores jogos Roblox de 2024 é o Anime Defenders, é um jogo de defesa baseado em animes. 
+								Onde os jogadores podem invocar seus heróis favoritos para proteger suas bases contra inimigos.
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="containernoticiatitulo">
-				<div class="containernoticia">
-					<div class="cardnoticia">
-						<div class="cortaconteudo">
-							<h2 class="titulonoticia">Como ganhar Robux?</h2>
-							<p class="textonoticia">Provavelmente a forma mais "válida" e indicada para ganhar Robux na plataforma, 
-								é ao criar jogos dentro do próprio Roblox.</p>
+			<div class="containerNoticiaTitulo">
+				<div class="containerNoticia">
+					<div class="cardNoticia">
+						<div class="tituloNoticia">
+							<h2>Como ganhar Robux?</h2>
 						</div>
+						<div class="dataNoticia">
+							<p>02 Março 2024</p>
+						</div>
+						<div class="textoNoticia">
+						<p>Provavelmente a forma mais "válida" e indicada para ganhar Robux na plataforma, 
+							é ao criar jogos dentro do próprio Roblox.</p>
+						</div>
+						
 					</div>
-					<div class="cardnoticia">
-						<div class="cortaconteudo">
-							<h2 class="titulonoticia">Roblox no PS4 e PS5</h2>
-							<p class="textonoticia">O Roblox chegou ao PS 4 e PS 5 em OUT/2023. O anúncio aconteceu 
-								durante a Roblox Developer Conference (RDC), sediada em San Franscisco.</p>
+					<div class="cardNoticia">
+						<div class="tituloNoticia">
+							<h2>Roblox no PS4 e PS5</h2>
+						</div>
+						<div class="dataNoticia">
+							<p>22 Abril 2024</p>
+						</div>
+						<div class="textoNoticia">
+							<p>O Roblox chegou ao PS 4 e PS 5 em OUT/2023. O anúncio aconteceu 
+							durante a Roblox Developer Conference (RDC), sediada em San Franscisco.</p>
 						</div>
 					</div>
 				</div>
 				<div class="titulo">
-					<img class="imgtitulo" src="img/robloxtitulo.png" alt="imgtitulo">
+					<img class="imgTitulo" src="img/robloxtitulo.png" alt="imgtitulo">
 				</div>
 			</div>
 
 			<div class="containermain">
 				<div class="livre">
-					<h2>Origem do Roblox</h2>
-					   <p>Roblox é uma plataforma em que os jogadores podem criar games baseados em sua criatividade, 
-						  além de explorar as invenções de outros usuários gratuitamente. Apesar de ser um sucesso 
-						  mundial, com milhões de jogadores ativos por mês e milhares de games na biblioteca, a 
-						  origem de Roblox ainda é desconhecida para alguns.</p>
-						<img class="logoroblox" src="img/robloxlogo.webp" alt="logoroblox">
-						<h2>Uma plataforma de ensino que virou criação de games</h2>
-						<p>Roblox foi desenvolvido por David Baszucki e Erick Cassel com um objetivo: transformar o 
-							aprendizado de crianças pela física em algo que despertasse o interesse dos jovens. 
-							Inicialmente, a plataforma contava com formas de criar objetos e ensinar através da 
-							mecânica de criação. Chamado DynaBlocks, a primeira versão do game foi projetada em 2004 e, 
-							um ano depois de seu desenvolvimento, resolveram mudar para o nome atual, sendo o mesmo 
-							da Roblox Corporation. Uma versão baseada no conceito original de Roblox está disponível 
-							para os jogadores testarem na própria plataforma. Baszucki ainda explica que o conceito de 
-							Roblox é mais antigo do que isso, sendo baseado em outro software usado para física em 2D, 
-							criado em 1989.</p>
-							<h2>Criadores de games podem lucrar com microtransações</h2>
-							<p>Roblox é uma plataforma de jogos que conta com mais de 200 milhões de usuários ativos mensalmente,
-							   sendo a maioria formada por crianças. Esses títulos são criados e publicados pelos próprios usuários, 
-							   que podem até mesmo ganhar dinheiro ao incluir microtransações pagas com Robux, a moeda virtual do serviço.</p>
-							<p>Caso o jogo faça sucesso, o criador ainda vai ter mais um obstáculo: fazer as pessoas gastarem Robux em microtransações.</p>
-					
+					<div class="textoLivre">
+						<h2>Origem do Roblox</h2>
+						<p>Roblox é uma plataforma em que os jogadores podem criar games baseados em sua criatividade, 
+							além de explorar as invenções de outros usuários gratuitamente. Apesar de ser um sucesso 
+							mundial, com milhões de jogadores ativos por mês e milhares de games na biblioteca, a 
+							origem de Roblox ainda é desconhecida para alguns.</p>
+							<img class="logoroblox" src="img/robloxlogo.webp" alt="logoroblox">
+							<h2>Uma plataforma de ensino que virou criação de games</h2>
+							<p>Roblox foi desenvolvido por David Baszucki e Erick Cassel com um objetivo: transformar o 
+								aprendizado de crianças pela física em algo que despertasse o interesse dos jovens. 
+								Inicialmente, a plataforma contava com formas de criar objetos e ensinar através da 
+								mecânica de criação. Chamado DynaBlocks, a primeira versão do game foi projetada em 2004 e, 
+								um ano depois de seu desenvolvimento, resolveram mudar para o nome atual, sendo o mesmo 
+								da Roblox Corporation. Uma versão baseada no conceito original de Roblox está disponível 
+								para os jogadores testarem na própria plataforma. Baszucki ainda explica que o conceito de 
+								Roblox é mais antigo do que isso, sendo baseado em outro software usado para física em 2D, 
+								criado em 1989.</p>
+								<h2>Criadores de games podem lucrar com microtransações</h2>
+								<p>Roblox é uma plataforma de jogos que conta com mais de 200 milhões de usuários ativos mensalmente,
+								sendo a maioria formada por crianças. Esses títulos são criados e publicados pelos próprios usuários, 
+								que podem até mesmo ganhar dinheiro ao incluir microtransações pagas com Robux, a moeda virtual do serviço.</p>
+								<p>Caso o jogo faça sucesso, o criador ainda vai ter mais um obstáculo: fazer as pessoas gastarem Robux em microtransações.</p>
+					</div>	
 				</div>
 
 				<div class="containerlateral">
@@ -143,9 +182,9 @@
 						<div class="extra"></div>
 					</div>
 				
-				 <div class="containerextra">
-					<div class="cardcarrinho">
-						<div class="carrinho">
+				 <div class="containerExtra">
+					<div class="cardExtra">
+						<div class="livreExtra">
 								<h3>Roblox é gratuito?</h3>
 								<p>Sim, o download e o acesso à plataforma são gratuitos.</p><p> Não é necessário pagar para criar uma conta ou entrar em um dos jogos. 
 								Por outro lado, o aplicativo permite compras internas a partir do uso de Robux, a moeda virtual do jogo adquirida a partir 
@@ -153,9 +192,9 @@
 							</div>
 						</div>
 					</div>
-				 <div class="containerextra">
-					<div class="cardcarrinho">
-						<div class="carrinho">
+				 <div class="containerExtra">
+					<div class="cardExtra">
+						<div class="livreExtra">
 								<h3>Onde jogar Roblox?</h3>
 									<p>A plataforma pode ser baixada gratuitamente no Android, iOS, macOS, Windows e nos consoles Xbox Series S e Xbox Series X. </p>
 									<p>Alguns jogos incluem a função crossplatform, que permite encontrar e jogar com usuários de diferentes plataformas.</p>
@@ -163,17 +202,19 @@
 							</div>
 						</div>
 					</div>
-				
 				</div>	
 			</div>
 		</section>
 
-		<footer style="background-color: rgb(122, 72, 254)">
-			<img src="img/raven_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/smartphone_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/thumb_up_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<img src="img/photo_camera_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-			<h2>Quem somos</h2>
+		<footer class="rodape">
+			<img class= "iconesRedes" src="./img/footer/footer-icons-twitterx.png" alt="iconeX"/>
+			<img class="iconesRedes" src="./img/footer/footer-icons-mensagem.png" alt="iconeCelular" />
+			<img class="iconesRedes" src="./img/footer/footer-icons-facebook.png" alt="iconeFacebook"/>
+			<img class="iconesRedes" src="./img/footer/footer-icone-instagram.png" alt="iconeInstagram"/>
+			<p>
+				<a href="#quem-somos" class="link-rodape">Quem Somos</a> | &copy; Games em Pauta - 2024. Todos os direitos reservados.
+			</p>
+			
 		</footer>
 	</body>
 </html>
