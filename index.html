@@ -7,89 +7,65 @@
     <meta name="description" content="Esse é o meu primeiro site" />
     <meta name="Keywords" content="programação,html,css,javascript" />
     <meta name="author" content="Caio, Erika, Priscilla, Vitor, Vívian" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Games em Pauta</title>
   </head>
   <body>
     <header>
-			   <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a#>
-					<nav class="menu">
-						<a href="caio.html">Caio</a>
-						<a href="erika.html">Mário Bros</a>
-						<a href="priscilla.html">Roblox</a>
-						<a href="vitor.html">Vitor</a>
-						<a href="vivian.html">Vívian</a>
-					</nav>
+		<div class="headerLogo">
+			<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+		</div>
 	
-					<div class="searchBarra">
-						<input type="search" placeholder="Pesquise no site" />
-						<button class="search-button">
-							<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
-						</button>
-				</div>
-				<div class="opcoesUser">
-					<label for="togglePopup" class="opcao">
-						<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
-						<span>Minha Conta</span>
-					</label>
-					<div class="opcao">
-						<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
-						<span>Meu Carrinho</span>
-					</div>
-				</div>
+			<nav class="menu">
+				<ul>
+
+					<a href="caio.html">Sci-Fi</a>
+					<a href="erika.html">Mario Bross</a>
+					<a href="priscilla.html">Roblox</a>
+					<a href="vitor.html">Zelda</a>
+					<a href="vivian.html">The Sims</a>
+				</ul>
+			</nav>
+
+		<div class="searchBarra">
+				<input type="search" placeholder="Pesquise no site" />
+				<button class="search-button">
+					<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
+				</button>
+		</div>
+		<div class="opcoesUser">
+			<label for="togglePopup" class="opcao">
+				<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+			</label>
+			<div class="opcao">
+				<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+			</div>
+		</div>
 		</header>
 
-    <input type="checkbox" id="togglePopup" class="toggle-popup" />
+		<input type="checkbox" id="togglePopup" class="toggle-popup">
 
-    <div id="popup" class="popup-container">
-      <div class="popup-content">
-        <label for="togglePopup" class="close-button">&times;</label>
-        <h2>Login</h2>
-        <form>
-          <div class="input-group">
-            <label for="email">E-mail:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="usuario@example.com"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required />
-          </div>
-          <button type="submit">Entrar</button>
-        </form>
-      </div>
-    </div>
-
-    <input type="checkbox" id="togglePopup" class="toggle-popup">
-
-    <div id="popup" class="popup-container">
-				<div class="popup-content">
-					<label for="togglePopup" class="close-button">&times;</label>
-					<h2>Login</h2>
-					<form>
-						<div class="input-group">
-							<label for="email">E-mail:</label>
-							<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
-						</div>
-						<div class="input-group">
-							<label for="senha">Senha:</label>
-							<input type="password" id="senha" name="senha" required>
-						</div>
-						<button type="submit">Entrar</button>
-					</form>
-				</div>
+		<div id="popup" class="popup-container">
+			<div class="popup-content">
+				<label for="togglePopup" class="close-button">&times;</label>
+				<h2>Login</h2>
+				<form>
+					<div class="input-group">
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
+					</div>
+					<div class="input-group">
+						<label for="senha">Senha:</label>
+						<input type="password" id="senha" name="senha" required>
+					</div>
+					<button type="submit">Entrar</button>
+				</form>
 			</div>
+		</div>
+
     <section class="principal">
       <div class="box-slider" id="slider">
         <input type="radio" name="slider" id="s1" />
@@ -114,6 +90,7 @@
           <img src="img/slider/Sims.jpg" alt="imagem Sims" />
         </label>
       </div>
+
       <div class="containerNoticiaReview">
        
         <h6 class="tituloNoticiaReview">Reviews Recentes</h6>
@@ -125,6 +102,7 @@
               do ano de 2024 é o Anime Defenders | por Lenon Klein 02/04/2024
             </p>
           </div>
+
           <div class="review-imagem-texto">
             <div class="imagem imagem-factorio"></div>
             <p class="textoReview">
@@ -133,6 +111,7 @@
               13/05/2024
             </p>
           </div>
+
           <div class="review-imagem-texto">
             <div class="imagem imagem-mario"></div>
             <p class="textoReview">
@@ -140,6 +119,7 @@
               Donkey Kong para o Switch | por Rômulo Justen 18/03/24
             </p>
           </div>
+
           <div class="review-imagem-texto">
             <div class="imagem imagem-zelda"></div>
             <p class="textoReview">
@@ -157,40 +137,37 @@
 					   </p>
 				    </div>
 				</div>
-			</div>
-              
 		</div> 
 
-		<div class="containernoticiareview">
-		  <!--section class = "sectionreview"> </section-->
-			<h6 class="titulonoticiareview">Notícias Recentes</h6>
- 			 <div class="cardnoticia">
+		<div class="containerNoticiaReview">
+		  	<h6 class="tituloNoticiaReview">Notícias Recentes</h6>
+ 			 <div class="cardNoticia">
 				  <div class="noticia-imagem-texto">
-					<div class="imagem imagem-roblox"> </div>
+					<div class="img img-roblox"> </div>
 					<p class="textoNoticia">O Roblox chegou ao PS 4 e PS 5 em OUT/2023. O anúncio aconteceu 
 						durante a Roblox Developer Conference (RDC), sediada em San Franscisco.</p>
 				  </div>
 			        
 				  <div class="noticia-imagem-texto">
-					<div class="imagem imagem-factorio"> </div>
+					<div class="img img-factorio"> </div>
 					<p class="textoNoticia">McDonald's lança uma linha exclusiva de hambúrgueres com "carne
 						alienígena", inspirada em Factorio. A novidade é aprovada pela 	ANVISA</p>
 				  </div>
 			      
 				  <div class="noticia-imagem-texto">
-					<div class="imagem imagem-mario"> </div>
+					<div class="img img-mario"> </div>
 					<p class="textoNoticia">Mario & Luigi Brothership - Um novo RPG da saga "Mario & Luigi", para o Nintendo Switch os irmãos 
 						estão com um visual em cel-shading que se assemelha a um desenho animado.</p>
 				  </div>
 			    
 			      <div class="noticia-imagem-texto">
-				    <div class="imagem imagem-zelda"> </div>
+				    <div class="img img-zelda"> </div>
 				    <p class="textoNoticia">Um novo The Legend of Zelda: Echoes of Wisdom protagonizado pela princesa que dá nome à série 
 						e o primeiro trailer de Metroid Prime 4.</p>
 			      </div>
 			  
 				  <div class="noticia-imagem-texto">
-				    <div class="imagem imagem-sims"> </div>
+				    <div class="img img-sims"> </div>
 				    <p class="textoNoticia">O novo pacote de expansão para The Sims 4 nos leva em uma jornada de romancepara o mundo charmoso
 						 e inspirado na Cidade do México de Ciudad Enamorada.</p> 
 				  </div>
