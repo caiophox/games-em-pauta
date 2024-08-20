@@ -250,17 +250,6 @@ header {
   animation: glow 4s cubic-bezier(0.95, 0.05, 0.8, 0.04) infinite alternate;
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #859f79,
-      0 0 40px #5df118, 0 0 50px #5df118, 0 0 60px #5df118, 0 0 70px #5df118;
-  }
-  to {
-    text-shadow: 0 0 20px #dbdbdb, 0 0 30px #a518f1, 0 0 40px #5df118,
-      0 0 50px #5df118, 0 0 60px #5df118, 0 0 70px #5df118, 0 0 80px #5df118;
-  }
-}
-
 .menu a {
   text-decoration: none;
   color: white;
