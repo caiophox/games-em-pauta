@@ -12,13 +12,56 @@ header {
 width: calc(100% - 20px);
 }
 
-.logo img {
-height: 50px;
-flex: 1;
+.headerLogo, .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+
 .menu {
-display: flex;
+height: 3.5em;
+justify-content: space-between;
+
+}
+
+#logotipo {
+  font-family: 'Rubik', system-ui;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+  color: #dbdbdb;
+  font-size: clamp(3vw, 5vw, 7vh);
+  text-shadow: 0.3vw 0.3vw #00000040;
+  white-space: nowrap;
+}
+
+#logotipo:hover {
+  font-family: 'Rubik Glitch', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #dbdbdb;
+}
+
+.glow {
+  font-size: 3vw;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 4s ease-in-out infinite alternate;
+  -moz-animation: glow 4s ease-in-out infinite alternate;
+  animation: glow 4s cubic-bezier(0.95, 0.05, 0.8, 0.04) infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+      text-shadow: 0 0 10px #622f2f50, 0 0 20px #dbdbdb50, 0 0 30px #9600e6,
+          0 0 40px #2e00e6, 0 0 50px #5f1e25, 0 0 60px #4a7e9c, 0 0 70px #e60073;
+  }
+  to {
+      text-shadow: 0 0 20px #dbdbdb, 0 0 30px #a518f1, 0 0 40px #a518f1,
+          0 0 50px #421f56, 0 0 60px #a518f1, 0 0 70px #a518f1, 0 0 80px #a518f1;
+  }
 }
 
 .menu a {
