@@ -14,29 +14,62 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/vitor.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Games em Pauta</title>
 	</head>
 	<body>
 		<header>
-      <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a#>
-        <a href="caio.html">Sci-Fi</a>
-        <a href="erika.html">Mário</a>
-        <a href="priscilla.html">Roblox</a>
-        <a href="vitor.html">Zelda</a>
-        <a href="vivian.html">The Sims</a>
-        <input type="search" placeholder="Pesquise no site" />
-        <img src="img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" />
-        <img
-          src="img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-        />
-        <img
-          src="img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-        />
-			</header>
+			<div class="headerLogo">
+				<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+			</div>
+		
+				<nav class="menu">
+					<a href="caio.html">Sci-Fi</a>
+					<a href="erika.html">Mário Bros</a>
+					<a href="priscilla.html">Roblox</a>
+					<a href="vitor.html">Zelda</a>
+					<a href="vivian.html">The Sims</a>
+				</nav>
 
+			<div class="searchBarra">
+					<input type="search" placeholder="Pesquise no site" />
+					<button class="search-button">
+						<img src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar">
+					</button>
+			</div>
+			<div class="opcoesUser">
+				<label for="togglePopup" class="opcao">
+					<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+				</label>
+				<div class="opcao">
+					<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+				</div>
+			</div>
+			</header>
+			<input type="checkbox" id="togglePopup" class="toggle-popup">
+
+			<div id="popup" class="popup-container">
+				<div class="popup-content">
+					<label for="togglePopup" class="close-button">&times;</label>
+					<h2>Login</h2>
+					<form>
+						<div class="input-group">
+							<label for="email">E-mail:</label>
+							<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
+						</div>
+						<div class="input-group">
+							<label for="senha">Senha:</label>
+							<input type="password" id="senha" name="senha" required>
+						</div>
+						<button type="submit">Entrar</button>
+					</form>
+				</div>
+			</div>
 
         
         <section class="principal">
