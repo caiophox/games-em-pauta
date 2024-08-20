@@ -432,7 +432,7 @@ header {
   
   .glow {
 	font-size: 3vw;
-	color: #fff;
+	color: #2ba81b;
 	text-align: center;
 	-webkit-animation: glow 4s ease-in-out infinite alternate;
 	-moz-animation: glow 4s ease-in-out infinite alternate;
@@ -441,13 +441,13 @@ header {
   
   @-webkit-keyframes glow {
 	from {
-		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #9600e6,
+		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #09ff00,
 			0 0 40px 
-			#5400e6, 0 0 50px #e60017, 0 0 60px #0092e6, 0 0 70px #e60073;
+			#0b8a00, 0 0 50px #0730a0, 0 0 60px #0092e6, 0 0 70px #e60073;
 	}
 	to {
-		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #a518f1, 0 0 40px #a518f1,
-			0 0 50px #a518f1, 0 0 60px #a518f1, 0 0 70px #a518f1, 0 0 80px #a518f1;
+		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #e4f500, 0 0 40px #e4f500,
+			0 0 50px #e4f500, 0 0 60px #e4f500, 0 0 70px #e4f500, 0 0 80px #e4f500;
 	}
   }
   
