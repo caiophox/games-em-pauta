@@ -18,7 +18,7 @@
 }
 */
 header {
-	background-color: #0092e6;
+	/* background-color: #0092e6; */
 	display: flex;
 	justify-content: center;
 	align-items: start;
@@ -43,7 +43,7 @@ header {
 	height: 60px;
 }
 .headerLogo {
-	background-color: yellowgreen;
+	/* background-color: yellowgreen; */
 	width: 50%;
 	height: 100%;
 	display: flex;
@@ -52,7 +52,7 @@ header {
 	overflow: hidden;
 }
 .headerNav {
-	background-color: violet;
+	/* background-color: violet; */
 	width: 25%;
 	height: 100%;
 	display: flex;
@@ -60,7 +60,7 @@ header {
 	align-items: center;
 }
 .headerSearch {
-	background-color: tomato;
+	/* background-color: tomato; */
 	width: 15%;
 	height: 100%;
 	display: flex;
@@ -70,13 +70,13 @@ header {
 .headerLogin {
 	width: 5%;
 	height: 100%;
-	background-color: teal;
+	/* background-color: teal; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .headerShop {
-	background-color: orangered;
+	/* background-color: orangered; */
 	width: 5%;
 	height: 100%;
 	display: flex;
