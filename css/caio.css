@@ -47,7 +47,7 @@ header {
 	width: 50%;
 	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	overflow: hidden;
 }
@@ -403,7 +403,7 @@ body {
 	background-size: contain;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 100px;
+	top: 60px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
