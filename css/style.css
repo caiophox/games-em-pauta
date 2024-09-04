@@ -685,3 +685,11 @@ header {
 	margin: 5px;
 	font-weight: 600;
 }
+
+.cardReview .review-imagem-texto {
+	cursor: pointer;
+  }
+  
+  .cardNoticia .noticia-imagem-texto {
+	cursor: pointer;
+  }
