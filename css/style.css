@@ -202,7 +202,6 @@ body {
   align-items: center;
 }
 
-<<<<<<< HEAD
 
 header {
     display: flex;
@@ -399,15 +398,6 @@ button[type="submit"] {
 }
 
 
-.principal  {
-	/* Vidro maior principal */
-	background-color: #dbdbdb10;
-	height: 100%;
-	max-width: 1240px;
-	margin: 0 100px;
-	min-width: 620px;
-	box-shadow: 4px 0px 4px #00000050, -4px 0px 4px #00000050;
-=======
 .principal {
   /* Vidro maior principal */
   background-color: #dbdbdb10;
@@ -416,7 +406,6 @@ button[type="submit"] {
   margin: 0 100px;
   min-width: 620px;
   box-shadow: 4px 0px 4px #00000050, -4px 0px 4px #00000050;
->>>>>>> 4efdded92fd0726089e007cb07de210c28098dd3
 }
 
 .box-slider {
