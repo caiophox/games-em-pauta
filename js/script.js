@@ -66,7 +66,7 @@ const reviews = [
       },
       {
         image: 'img-mario',
-        text: `Mario & Luigi Brothership - Um novo RPG da saga "Mario & Luigi", para o Nintendo Switch os irmãos 
+        text: `Mario & Luigi Brothership - Um novo RPG da saga para o Nintendo Switch, os irmãos 
 							estão com um visual em cel-shading que se assemelha a um desenho animado.`
       },
       {
