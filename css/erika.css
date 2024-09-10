@@ -694,7 +694,6 @@ strong {
   background-size: contain;
   border-radius: 5px;
   color: white;
-  box-shadow: 0 0 60px white;
   font-family: "Sora", sans-serif;
   position: absolute;
   bottom: 20%;
@@ -703,6 +702,11 @@ strong {
   cursor: pointer;
   z-index: 9;
   animation: botão-game 10s ease-in-out infinite;
+}
+
+.btn-game_border {
+  box-shadow: 0 0 60px white;
+  border: 5px solid white;
 }
 
 @keyframes botão-game {
