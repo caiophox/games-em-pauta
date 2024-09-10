@@ -58,7 +58,6 @@ buttonFactorio.addEventListener('click', function () {
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
-		// Change the src of the img elements
 		textPrice[0].innerText = 'Biter de pelúcia\nR$ 15,99';
 		textPrice[1].innerText = 'Refrigerante de lava\nR$ 12,99';
 		textPrice[2].innerText = 'Spidertron miniatura\nR$ 155';
@@ -135,18 +134,16 @@ buttonFactorio.addEventListener('click', function () {
 		icons[9].classList.add('notaMedia');
 		icons[14].classList.add('notaMedia');
 
-		// Hide the loading overlay after the images have changed
 		setTimeout(function () {
 			loadingOverlay.classList.remove('show');
-		}, 500); // Wait for 1 second before hiding the overlay
-	}, 500); // Wait for 0.5 second before changing the images
+		}, 500);
+	}, 500);
 });
 
 buttonHardspace.addEventListener('click', function () {
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
-		// Change the src of the img elements
 		textPrice[0].innerText = 'Chips de batata sintética\nR$ 177';
 		textPrice[1].innerText =
 			'Seguro de vida (radiação apenas)\nR$ 12.499\n p/ semana';
@@ -231,19 +228,16 @@ buttonHardspace.addEventListener('click', function () {
 		icons[13].classList.add('notaMedia');
 		icons[14].classList.add('notaRuim');
 
-		// Hide the loading overlay after the images have changed
 		setTimeout(function () {
 			loadingOverlay.classList.remove('show');
-		}, 200); // Wait for 1 second before hiding the overlay
-	}, 500); // Wait for 0.5 second before changing the images
+		}, 200);
+	}, 500);
 });
 
 buttonCyberpunk.addEventListener('click', function () {
-	// Show the loading overlay
 	loadingOverlay.classList.add('show');
 
 	setTimeout(function () {
-		// Change the src of the img elements
 		textPrice[0].innerText = 'Casaco de pele SythSkin\nR$ 15.460';
 		textPrice[1].innerText = 'Segurança particular\nR$ 3.000\n p/dia';
 		textPrice[2].innerText = 'Munição para Kenshin JKE-X2\nR$ 132*\n*cada bala';
@@ -323,6 +317,6 @@ buttonCyberpunk.addEventListener('click', function () {
 		icons[14].classList.add('notaRuim');
 		setTimeout(function () {
 			loadingOverlay.classList.remove('show');
-		}, 200); // Wait for 1 second before hiding the overlay
-	}, 500); // Wait for 0.5 second before changing the images
+		}, 200);
+	}, 500);
 });
