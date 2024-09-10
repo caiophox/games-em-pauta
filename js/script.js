@@ -11,6 +11,16 @@ function animarMenu(){
 };
 
 // Validação do formulário (popup login)
+function logar(){
+ var login = document.getElementById('email').value;
+ var senha = document.getElementById('senha').value;
+  if(login == 'teste' && senha == 'teste'){
+    alert('sucesso');
+  }else {
+    alert('Senha ou usuário incorretos')
+  }
+}
+
 
 
 // Seleciona o container NoticiaReview
