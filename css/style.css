@@ -696,3 +696,98 @@ footer {
 .rodape a.link-rodape:hover {
   text-decoration: underline;
 }
+
+/*Estilização do menu-mobile*/
+
+#btn-menu{
+	width: 40px;
+	height: 40px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+	transition: .2s;
+	display: none;
+	margin-right: 250px;
+
+  }
+
+  .linha{
+	width: 20px;
+	height:3px;
+	background-color: #ccc;
+	display: block;
+	margin: 5px auto;
+	position: relative;
+	transform-origin: center;
+    transition: 0.2s;
+  }
+
+  #btn-menu.ativar{
+	border: 2px solid #a518f1;
+  }
+
+  #btn-menu.ativar .linha:nth-child(1){
+	transform: translateY(8px) rotate(-45deg);
+	background-color: #ccc;
+  }
+
+  #btn-menu.ativar .linha:nth-child(3){
+	transform: translateY(-8px) rotate(45deg);
+	background-color: #ccc
+  }
+
+  #btn-menu.ativar .linha:nth-child(2){
+	width: 0;
+  }
+
+  .menu-mobile{
+    background-color: #0000008b;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 90px;
+    left: 0px;
+    width: 100%;
+    height: 0;
+	visibility: hidden;
+	transition: 0.5s;
+	overflow: hidden;
+  
+  }
+
+  .menu-mobile nav a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    font-size: 15pt;
+  }
+
+  .menu-mobile nav a:hover{
+    background-color: #0000008b;
+  }
+
+  @media screen and (max-width: 1030px) {
+    .menu{
+      display: none;
+	 
+	
+    }
+
+	#logotipo{
+		width: 100%;
+		
+	}
+
+	.menu-mobile.abrir{
+		visibility: visible;
+		height: calc(100vh - 90px);
+	}
+
+	#btn-menu{
+		display: block;
+
+	}
+
+}
