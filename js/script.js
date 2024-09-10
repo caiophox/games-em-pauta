@@ -58,24 +58,3 @@ function animarMenu(){
 };
 
 // Validação do formulário (popup login)
-
-let emailInput = document.getElementById("email")
-let emailLabel = document.querySelector("labelfor='email']")
-let emailHelper = document.getElementById("email-helper") 
-const mensagem = "Por favor, insira um email válido.";
-
-emailInput.addEventListener("change", (evento) => {
-  const valor = evento.target.value;
-
-  if (valor.includes("@")) {
-    emailInput.classList.add("correto");
-    emailInput.classList.remove("erro");
-    emailHelper.classList.remove("visible");
-  } else {
-    emailInput.classList.remove("correto");
-    emailInput.classList.add("erro");
-    emailHelper.innerText = mensagem;
-    emailHelper.classList.add("visible");
-  }
-});
-
