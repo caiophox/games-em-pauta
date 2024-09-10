@@ -18,50 +18,73 @@
 		<link rel="icon" href="img/priscilla/RobloxLogo.webp">
 	</head>
 	<body>
-		<header>
-			<div class="headerLogo">
-				<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
-			</div>
-		
-			<div class="menu">
-				<nav class="nav-list">
-					<a href="caio.html">Sci-Fi</a>
-					<a href="erika.html">Mário Bros</a>
-					<a href="priscilla.html">Roblox</a>
-					<a href="vitor.html">Zelda</a>
-					<a href="vivian.html">The Sims</a>
-				</nav>
-			</div>
-
-			<div class="opcoesUser">
-				<label for="togglePopup" class="opcao">
-					<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
-				</label>
-				<div class="opcao">
-					<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
-				</div>
-			</div>
-		</header>
-
-			<input type="checkbox" id="togglePopup" class="toggle-popup">
-
-			<div id="popup" class="popup-container">
-				<div class="popup-content">
-					<label for="togglePopup" class="close-button">&times;</label>
-					<h2>Login</h2>
-					<form>
-						<div class="input-group">
-							<label for="email">E-mail:</label>
-							<input type="email" id="email" name="email" placeholder="usuario@example.com" required>
-						</div>
-						<div class="input-group">
-							<label for="senha">Senha:</label>
-							<input type="password" id="senha" name="senha" required>
-						</div>
-						<button type="submit">Entrar</button>
-					</form>
-				</div>
-			</div>
+	</head>
+	<body>
+	  <header>
+		  <div class="headerLogo">
+			  <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+		  </div>
+		  
+		  <div class="menu">
+			  <nav class="nav-list">
+				  <a href="caio.html">Sci-Fi</a>
+				  <a href="erika.html">Mário Bros</a>
+				  <a href="priscilla.html">Roblox</a>
+				  <a href="vitor.html">Zelda</a>
+				  <a href="vivian.html">The Sims</a>
+			  </nav>
+		  </div>
+  
+		  <button onclick="animarMenu()" id="btn-menu">
+			  <span class="linha"></span>
+			  <span class="linha"></span>
+			  <span class="linha"></span>
+		  </button>
+  
+			  <div class="menu-mobile" id="menu-mobile">
+				  <nav>
+					  <a href="caio.html">Sci-Fi</a>
+					  <a href="erika.html">Mário Bros</a>
+					  <a href="priscilla.html">Roblox</a>
+					  <a href="vitor.html">Zelda</a>
+					  <a href="vivian.html">The Sims</a>
+				  </nav>
+			  </div>
+	  
+				  <div class="opcoesUser">
+					  <label for="togglePopup" class="opcao">
+						  <img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+					  </label>
+					  <div class="opcao">
+						  <img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+					  </div>
+				  </div>
+		  </header>
+  
+		  <input type="checkbox" id="togglePopup" class="toggle-popup">
+  
+		  <div id="popup" class="popup-container">
+			  <div class="popup-content">
+				  <label for="togglePopup" class="close-button">&times;</label>
+				  <h2>Login</h2>
+				  <form>
+					  <div class="input-group">
+						  <label for="email">E-mail:</label>
+						  <input type="email" id="email" name="email" placeholder="usuario@example.com" required>
+					  </div>
+					  <div class="input-group">
+						  <label for="senha">Senha:</label>
+						  <input type="password" id="senha" name="senha" required>
+					  </div>
+					  <button type="submit">Entrar</button>
+  
+					  <div class="cadastro">
+						  <a href="#">Esqueceu sua senha?</a>
+						  <a href="#">Cadastre-se</a>
+					  </div>
+				  </form>
+			  </div>
+		  </div>
 
 		<section class="principal">
 			<div class="containerReview">
