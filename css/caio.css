@@ -17,8 +17,67 @@
 	display: flex;
 }
 */
+header {
+	/* background-color: #0092e6; */
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	/* background-color: #00000099; */
+	z-index: 255;
+	backdrop-filter: blur(4px);
+	height: 60px;
+	width: 100%;
+	min-width: 620px;
+}
+.headerContent {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	min-width: 620px;
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 100px;
+	height: 60px;
+}
 .headerLogo {
+	/* background-color: yellowgreen; */
 	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	overflow: hidden;
+}
+.headerNav {
+	/* background-color: violet; */
+	width: 25%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.headerSearch {
+	/* background-color: tomato; */
+	width: 15%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.headerLogin {
+	width: 5%;
+	height: 100%;
+	/* background-color: teal; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.headerShop {
+	/* background-color: orangered; */
+	width: 5%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -344,7 +403,7 @@ body {
 	background-size: contain;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 100px;
+	top: 60px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
@@ -585,21 +644,7 @@ body {
 	mask-size: cover;
 }
 /*header*/
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	width: 100%;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	background-color: #00000099;
-	z-index: 255;
-	backdrop-filter: blur(4px);
-	height: 100px;
-}
-
+/* 
 .headerLogo,
 .menu {
 	display: flex;
@@ -698,7 +743,7 @@ header {
 }
 
 .searchBarra .search-button {
-	background-color: #dbdbdb10; /* Cor de fundo do botão */
+	background-color: #dbdbdb10; 
 	border: none;
 	border-radius: 0 0px 0px 0;
 	padding: 10px;
@@ -710,7 +755,7 @@ header {
 }
 
 .searchBarra .search-button img {
-	width: 20px; /* Tamanho da imagem do ícone */
+	width: 20px; 
 	height: auto;
 }
 
@@ -797,7 +842,7 @@ button[type='submit'] {
 
 .toggle-popup:checked + .popup-container {
 	display: flex;
-}
+} */
 footer {
 	color: #fff;
 	text-align: center;
