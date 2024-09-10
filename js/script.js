@@ -1,3 +1,4 @@
+
 // Selecione os elementos que você deseja tornar clicáveis
 const cardReviews = document.querySelectorAll('.cardReview .review-imagem-texto');
 const cardNoticias = document.querySelectorAll('.cardNoticia .noticia-imagem-texto');
