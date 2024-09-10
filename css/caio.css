@@ -918,6 +918,7 @@ button[type='submit'] {
 .toggle-popup:checked + .popup-container {
 	display: flex;
 } */
+ 
 footer {
 	color: #fff;
 	text-align: center;
