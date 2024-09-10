@@ -10,14 +10,18 @@
       content="Jogos, Mário Bros, Luigi, Nintendo, Super Nintendo"
     />
     <meta name="author" content="Erika Oliveira" />
+    <meta name="theme-color" content="#d41818" />
     <title>Super Mario Bros</title>
+    <link
+      rel="shortcut icon"
+      href="img/erika/mario-icon.png"
+      type="image/x-icon"
+    />
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?
-      family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;
-      1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
     <!--link css-->
@@ -26,13 +30,15 @@
 
   <body>
     <header>
-      <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+      <div class="headerLogo">
+        <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
+      </div>
+
       <nav class="menu">
         <a href="caio.html">Sci-Fi</a>
-        <a href="erika.html">Mário Bros</a>
         <a href="priscilla.html">Roblox</a>
         <a href="vitor.html">Zelda</a>
-        <a href="vivian.html">Sims</a>
+        <a href="vivian.html">The Sims</a>
       </nav>
 
       <div class="searchBarra">
@@ -45,19 +51,17 @@
         </button>
       </div>
       <div class="opcoesUser">
-        <div class="opcao">
+        <label for="togglePopup" class="opcao">
           <img
             src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Minha Conta"
           />
-          <span>Minha Conta</span>
-        </div>
+        </label>
         <div class="opcao">
           <img
             src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
             alt="Meu Carrinho"
           />
-          <span>Meu Carrinho</span>
         </div>
       </div>
     </header>
@@ -114,7 +118,7 @@
           </div>
           <div class="cardnoticia">
             <div class="cortaconteudo">
-              <img src="img/erika/mario-rpg.jpg" alt="imagem de jogo" />
+              <img src="img/erika/mario-rpg.jpg" alt="" />
 
               <p class="textonoticia">
                 23.05.2024 - Junte-se a Mário e um elenco de excêntricos em uma
@@ -130,23 +134,47 @@
           />
         </div>
       </div>
-
-      <div class="containermain">
-        <div class="livre">
+      <main class="containermain">
+        <section class="livre">
           <h1>Conheça o Mário!</h1>
-          <p class="introducao_p">
-            Se você é fã do Mário — ou mesmo se acabou de descobrir sobre ele
-            hoje — você veio ao lugar certo! Aprenda tudo o que há para saber
-            sobre essa maravilha multitalentosa e bigoduda, e confira as últimas
-            notícias, vídeos e muito mais.
-          </p>
+          <article>
+            <p class="introducao_p">
+              <strong>Mario Segale,</strong>
+              <img
+                class="img-lupa"
+                src="img/erika/lupa.png"
+                alt="imagem de lupa"
+              />
+              empresário americano que alugou um armazém para a Nintendo na
+              cidade de Tukwila, Washington
+              <abbr title="Estados Unidos da America">(U.S.A)</abbr> em 1981. A
+              Nintendo teve dificuldades para pagar o aluguel, e,
+              <em
+                >em vez de despejá-los, Segale lhes deu mais tempo para
+                conseguir o dinheiro.</em
+              >
+              Em agradecimento, a Nintendo renomeou seu personagem principal, de
+              <cite>"Jumpman" </cite> no jogo <cite>"Donkey Kong"</cite>, para
+              <cite>"Mario"</cite> em sua homenagem. Nascido em 1934, nos deixou
+              em 2018 aos 84 anos. Sua bondade eternizada atravéz do seu nome,
+              inspirando nosso heroi no Game <cite>Super Mário Bros</cite>...
+              <small
+                >- UOL,
+                <time datetime="28-08-2023">28 de agosto de 2023 -</time>
+              </small>
+              <img
+                class="img-mario_segala"
+                src="img/erika/mario-arnold-.png"
+                alt="imagem de mário segala"
+              />
+            </p>
+          </article>
           <img
             class="img_mario-estrela"
             src="img/erika/mario_3.png"
             alt="imagem do mario bros"
           />
           <h2>A História do Super Mário</h2>
-
           <div class="box-video">
             <video
               class="video-nostalgia"
@@ -177,10 +205,10 @@
               </p>
             </article>
           </div>
-          <!------BOX PERSONAGENS--------->
-          <div class="personagens">
+          <!------SEÇÃO PERSONAGENS--------->
+          <section class="personagens">
             <div class="box-range">
-              <div class="box-slider1">
+              <div class="box-slider1" id="imageContainer">
                 <img src="img/erika/card-Mario.jpg" alt="imagem de card" />
                 <img src="img/erika/card-Luigi.jpg" alt="imagem de card" />
                 <img
@@ -202,8 +230,13 @@
                 />
                 <img src="img/erika/card-Diddy-Kong.jpg" alt="imagem de card" />
               </div>
+              <input type="range" id="range" min="0" max="100" value="0" />
             </div>
+
+            <!--ANIMAÇÃO-->
             <div class="box-animation">
+              <button class="btn-game">GAME</button>
+
               <div class="box-placar">
                 <img src="img/erika/coin.png" alt="imagem de moeda" />
                 <span>36</span>
@@ -295,8 +328,71 @@
                 alt="imagem de vento"
               />
             </div>
-          </div>
-        </div>
+            <!---GAME HOME----------->
+            <div class="box-game_home">
+              <img
+                class="img-fundo_home"
+                src="img/erika/background-game.jpg"
+                alt="imagem de fundo"
+              />
+              <div class="box-title">
+                <h2 class="title-jogar">
+                  Pressione Qualquer Tecla para Pular!
+                </h2>
+                <div class="box-controle">
+                  <button class="btn-comum btn-jogar">JOGAR</button>
+                  <img
+                    class="img-controle"
+                    src="img/erika/controle.png"
+                    alt="imagem de manete"
+                  />
+                  <button class="btn-comum btn-voltar">VOLTAR</button>
+                </div>
+              </div>
+            </div>
+            <!----GAME STAR-->
+            <div class="box-game_star">
+              <img
+                class="clouds clouds1"
+                src="img/erika/clouds.png"
+                alt="imagem de nuvem"
+              />
+              <img
+                class="clouds clouds2"
+                src="img/erika/clouds.png"
+                alt="imagem de nuvem"
+              />
+              <img
+                class="clouds clouds3"
+                src="img/erika/clouds.png"
+                alt="imagem de nuvem"
+              />
+              <img
+                class="clouds clouds4"
+                src="img/erika/clouds.png"
+                alt="imagem de nuvem"
+              />
+
+              <img
+                class="mario"
+                src="img/erika/mario.gif"
+                alt="imgem do mario"
+              />
+              <img
+                class="pipe-game"
+                src="img/erika/pipe-game.png"
+                alt="imagem do pipe"
+              />
+              <div class="box-game_over">
+                <img
+                  class="img-game_over"
+                  src="img/erika/Mario_(Defeated)_-_Super_Mario_Sticker.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+        </section>
         <div class="containerlateral">
           <div class="containeravaliacoes">
             <div class="cardavaliacoes">
@@ -678,28 +774,27 @@
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </section>
-
     <footer class="rodape">
       <img
         class="iconesRedes"
-        src="./img/footer/footer-icons-twitterx.png"
+        src="./img/footer/IconeTwitter_branco.png"
         alt="iconeX"
       />
       <img
         class="iconesRedes"
-        src="./img/footer/footer-icons-mensagem.png"
+        src="./img/footer/IconeEmail_branco.png"
         alt="iconeCelular"
       />
       <img
         class="iconesRedes"
-        src="./img/footer/footer-icons-facebook.png"
+        src="./img/footer/IconeFace_branco.png"
         alt="iconeFacebook"
       />
       <img
         class="iconesRedes"
-        src="./img/footer/footer-icone-instagram.png"
+        src="./img/footer/IconeInsta_branco.png"
         alt="iconeInstagram"
       />
       <p>
@@ -707,5 +802,6 @@
         em Pauta - 2024. Todos os direitos reservados.
       </p>
     </footer>
+    <script src="js/erika.js"></script>
   </body>
 </html>
