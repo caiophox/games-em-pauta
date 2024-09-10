@@ -1,3 +1,25 @@
+// Menu hambúrguer
+const menuDiv = document.getElementById('menu-mobile');
+const btnAnimar = document.getElementById('btn-menu');
+
+menuDiv.addEventListener('click', animarMenu);
+
+function animarMenu() {
+	menuDiv.classList.toggle('abrir');
+	btnAnimar.classList.toggle('ativar');
+}
+
+// Validação do formulário (popup login)
+function logar() {
+	var login = document.getElementById('email').value;
+	var senha = document.getElementById('senha').value;
+	if (login == 'teste' && senha == 'teste') {
+		alert('sucesso');
+	} else {
+		alert('Senha ou usuário incorretos');
+	}
+}
+
 const buttonFactorio = document.getElementById('buttonFactorio');
 const buttonHardspace = document.getElementById('buttonHardspace');
 const buttonCyberpunk = document.getElementById('buttonCyberpunk');
