@@ -21,8 +21,6 @@ function logar(){
   }
 }
 
-
-
 // Container NoticiaReview
 const container = document.querySelector('.containerNoticiaReview');
 
@@ -76,12 +74,8 @@ const reviews = [
       },
       {
         image: 'img-mario',
-<<<<<<< HEAD
         text: `Mario & Luigi Brothership - Um novo RPG da saga, para o Nintendo Switch os irmãos 
-=======
-        text: `Mario & Luigi Brothership - Um novo RPG da saga para o Nintendo Switch, os irmãos 
->>>>>>> 731eba9bda49b6f02c1ea6fe780a8b544781b235
-							estão com um visual em cel-shading que se assemelha a um desenho animado.`
+        			estão com um visual em cel-shading que se assemelha a um desenho animado.`
       },
       {
         image: 'img-zelda',
