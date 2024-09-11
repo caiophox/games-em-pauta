@@ -77,7 +77,7 @@ buttonFactorio.addEventListener('click', function () {
 		adsImg6.src = 'img/caio/factorio/Ad6.webp';
 		videoLoop.classList.add('videoLoopOff');
 		stickyLogo.src = 'img/caio/factorio/FactorioLogo.png';
-		stickyImg.style.backgroundImage = 'url(../img/caio/factorio/Rocket.png)';
+		stickyImg.style.backgroundImage = 'url(./img/caio/factorio/Rocket.png)';
 		tituloLogo.src = 'img/caio/factorio/FactorioLogo.png';
 		reflection.src = 'img/caio/factorio/FactorioLogo.png';
 		favicon.href = 'img/caio/factorio/Factorio.ico';
@@ -166,7 +166,7 @@ buttonHardspace.addEventListener('click', function () {
 		adsImg6.src = 'img/caio/hardspace/Ad6.webp';
 		videoLoop.classList.add('videoLoopOff');
 		stickyLogo.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
-		stickyImg.style.backgroundImage = 'url(../img/caio/hardspace/Rookie.png)';
+		stickyImg.style.backgroundImage = 'url(./img/caio/hardspace/Rookie.png)';
 		tituloLogo.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
 		reflection.src = 'img/caio/hardspace/HardspaceShipbreakerLogo.png';
 		favicon.href = 'img/caio/hardspace/Hardspace.ico';
@@ -257,7 +257,7 @@ buttonCyberpunk.addEventListener('click', function () {
 		adsImg6.src = 'img/caio/cyberpunk/Ad6.webp';
 		videoLoop.classList.add('videoLoopOff');
 		stickyLogo.src = 'img/caio/cyberpunk/CyberpunkLogo2.png';
-		stickyImg.style.backgroundImage = 'url(../img/caio/cyberpunk/Songbird.png)';
+		stickyImg.style.backgroundImage = 'url(./img/caio/cyberpunk/Songbird.png)';
 		tituloLogo.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
 		reflection.src = 'img/caio/cyberpunk/CyberpunkLogo.png';
 		favicon.href = 'img/caio/cyberpunk/Cyberpunk.ico';
