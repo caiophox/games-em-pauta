@@ -29,25 +29,9 @@
 			<div class="headerLogo">
 				<a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
 			</div>
-			
-			<div class="menu">
-				<nav class="nav-list">
-					<a href="caio.html">Sci-Fi</a>
-					<a href="erika.html">Mário Bros</a>
-					<a href="priscilla.html">Roblox</a>
-					<a href="vitor.html">Zelda</a>
-					<a href="vivian.html">The Sims</a>
-				</nav>
-			</div>
-	
-			<button onclick="animarMenu()" id="btn-menu">
-				<span class="linha"></span>
-				<span class="linha"></span>
-				<span class="linha"></span>
-			</button>
-	
-				<div class="menu-mobile" id="menu-mobile">
-					<nav>
+		
+				<div class="menu">
+					<nav class="nav-list">
 						<a href="caio.html">Sci-Fi</a>
 						<a href="erika.html">Mário Bros</a>
 						<a href="priscilla.html">Roblox</a>
@@ -55,19 +39,35 @@
 						<a href="vivian.html">The Sims</a>
 					</nav>
 				</div>
+
+				<button onclick="animarMenu()" id="btn-menu">
+					<span class="linha"></span>
+					<span class="linha"></span>
+					<span class="linha"></span>
+				</button>
 		
-					<div class="opcoesUser">
-						<label for="togglePopup" class="opcao">
-							<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
-						</label>
-						<div class="opcao">
-							<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
-						</div>
+					<div class="menu-mobile" id="menu-mobile">
+						<nav>
+							<a href="caio.html">Sci-Fi</a>
+							<a href="erika.html">Mário Bros</a>
+							<a href="priscilla.html">Roblox</a>
+							<a href="vitor.html">Zelda</a>
+							<a href="vivian.html">The Sims</a>
+						</nav>
 					</div>
+			
+			<div class="opcoesUser">
+				<label for="togglePopup" class="opcao">
+					<img src="./img/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Minha Conta">
+				</label>
+				<div class="opcao">
+					<img src="./img/shopping_cart_checkout_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Meu Carrinho">
+				</div>
+			</div>
 			</header>
-	
+
 			<input type="checkbox" id="togglePopup" class="toggle-popup">
-	
+
 			<div id="popup" class="popup-container">
 				<div class="popup-content">
 					<label for="togglePopup" class="close-button">&times;</label>
@@ -81,8 +81,9 @@
 							<label for="senha">Senha:</label>
 							<input type="password" id="senha" name="senha" required>
 						</div>
-						<button type="submit" onclick="logar()">Entrar</button>
-	
+				
+						<button type="submit">Entrar</button>
+						
 						<div class="cadastro">
 							<a href="#">Esqueceu sua senha?</a>
 							<a href="#">Cadastre-se</a>
@@ -90,36 +91,7 @@
 					</form>
 				</div>
 			</div>
-	
-			<section class="principal">
-				<div class="box-slider" id="slider">
-					<input type="radio" name="slider" id="s1" />
-					<input type="radio" name="slider" id="s2" />
-					<input type="radio" name="slider" id="s3" checked />
-					<input type="radio" name="slider" id="s4" />
-					<input type="radio" name="slider" id="s5" />
-	
-					<label for="s1" id="slide1">
-						<img src="img/slider/Factore.jpg" alt="imagem Factore" />
-					</label>
-					<label for="s2" id="slide2">
-						<img src="img/slider/roblox.jpeg" alt="imagem roblox" />
-					</label>
-					<label for="s3" id="slide3">
-						<img src="img/slider/Super-Mario.jpg" alt="imagem Super-Mario" />
-					</label>
-					<label for="s4" id="slide4">
-						<img src="img/slider/zelda-principal.webp" alt="imagem Zelda" />
-					</label>
-					<label for="s5" id="slide5">
-						<img src="img/slider/Sims.jpg" alt="imagem Sims" />
-					</label>
-				</div>
-	
-				<div class="containerNoticiaReview">
-					
-	        </div>
-	</section>
+
 		<section class="principal">
 			<div class="containerReview">
 				<div class="cardReview">
