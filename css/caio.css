@@ -406,7 +406,7 @@ body {
 	background-size: contain;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 60px;
+	top: 100px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
@@ -846,41 +846,6 @@ button[type='submit'] {
 .toggle-popup:checked + .popup-container {
 	display: flex;
 } */
-footer {
-	color: #fff;
-	text-align: center;
-	padding: 20px 0;
-	font-family: 'Roboto', sans-serif;
-	width: 100%;
-	background-color: #00000040;
-}
-
-.rodape img {
-	margin: 0 10px;
-	width: 24px;
-	height: 24px;
-	vertical-align: middle; /* Alinha os ícones com o texto */
-	cursor: pointer;
-}
-
-.rodape p {
-	margin-top: 10px;
-	font-size: 14px;
-}
-
-.rodape img:hover {
-	opacity: 0.8;
-}
-
-.rodape a.link-rodape {
-	color: #fff;
-	text-decoration: none;
-	margin-right: 10px;
-}
-
-.rodape a.link-rodape:hover {
-	text-decoration: underline;
-}
 
 header {
 	display: flex;
@@ -895,7 +860,7 @@ header {
 	background-color: #00000099;
 	z-index: 255;
 	backdrop-filter: blur(4px);
-	height: 60px;
+	height: 100px;
 }
 
 .headerLogo {
@@ -925,6 +890,56 @@ header {
 	color: #fff;
 	padding-block: 16px;
 	text-decoration: none;
+}
+
+#logotipo {
+	font-family: 'Rubik', system-ui;
+	font-weight: 900;
+	font-style: normal;
+	text-decoration: none;
+	color: #dbdbdb;
+	font-size: clamp(2vw, 3vw, 4vh);
+	text-shadow: 0.3vw 0.3vw #00000040;
+	white-space: nowrap;
+	margin-left: 10px;
+}
+
+#logotipo:hover {
+	font-family: 'Rubik Glitch', system-ui;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	color: #dbdbdb;
+}
+
+.glow {
+	font-size: 3vw;
+	color: #fff;
+	text-align: center;
+	-webkit-animation: glow 4s ease-in-out infinite alternate;
+	-moz-animation: glow 4s ease-in-out infinite alternate;
+	animation: glow 4s cubic-bezier(0.95, 0.05, 0.8, 0.04) infinite alternate;
+}
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #0092e6,
+			0 0 40px #0092e6, 0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6;
+	}
+	to {
+		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #0092e6, 0 0 40px #0092e6,
+			0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6, 0 0 80px #0092e6;
+	}
+}
+@keyframes glow {
+	from {
+		text-shadow: 0 0 10px #dbdbdb50, 0 0 20px #dbdbdb50, 0 0 30px #0092e6,
+			0 0 40px #0092e6, 0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6;
+	}
+	to {
+		text-shadow: 0 0 20px #dbdbdb, 0 0 30px #0092e6, 0 0 40px #0092e6,
+			0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6, 0 0 80px #0092e6;
+	}
 }
 
 .opcoesUser {
@@ -1033,6 +1048,11 @@ button[type='submit'] {
 	display: flex;
 }
 
+h2 {
+	/* margin-top: 1.05em; /* Espaçamento acima do subtítulo (equivalente a 20px convertido em (20/16)) */
+	margin-bottom: 0.625em; /* Espaçamento abaixo do subtítulo (equivalente a 10px convertido em (10/16) */
+}
+
 #btn-menu {
 	width: 40px;
 	height: 40px;
@@ -1098,4 +1118,23 @@ button[type='submit'] {
 
 .menu-mobile nav a:hover {
 	background-color: #0000008b;
+}
+
+@media screen and (max-width: 1030px) {
+	.menu {
+		display: none;
+	}
+
+	#logotipo {
+		width: 100%;
+	}
+
+	.menu-mobile.abrir {
+		visibility: visible;
+		height: calc(100vh - 90px);
+	}
+
+	#btn-menu {
+		display: block;
+	}
 }
