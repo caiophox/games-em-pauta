@@ -29,7 +29,7 @@ container.innerHTML = '';
 // Cria os elementos 
 const reviews = [
   {
-    title: 'Reviews Recentes',
+    title: 'Reviews',
     reviews: [
       {
         imagem: 'imagem-roblox',
@@ -59,7 +59,7 @@ const reviews = [
   },
   
   {
-    title: 'Notícias Recentes',
+    title: 'Notícias',
     noticias: [
       {
         image: 'img-roblox',
