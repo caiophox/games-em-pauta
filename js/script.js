@@ -1,4 +1,3 @@
-
 // Menu hambúrguer
 const menuDiv = document.getElementById("menu-mobile");
 const btnAnimar = document.getElementById("btn-menu");
@@ -197,5 +196,38 @@ cardNoticias.forEach((card, index) => {
         break;
     }
   });
+});
+
+//lista de games roblox
+
+const games = [
+  {
+    name: "Natural Disaster Survival",
+    image: "img-roblox",
+  },
+  {
+    name: "Royale High School",
+    image: "imagem-roblox",
+  },
+  {
+    name: "Jailbreak",
+    image: "img-roblox",
+  },
+  // add more games to the array
+];
+
+const gameList = document.querySelector(".game-list");
+
+games.forEach((game) => {
+  const gameItem = document.createElement("div");
+  gameItem.className = "game-item";
+
+  const gameImage = document.createElement("img");
+  gameImage.src = game.image;
+  gameImage.alt = game.name;
+
+  gameItem.appendChild(gameImage);
+
+  gameList.appendChild(gameItem);
 });
 

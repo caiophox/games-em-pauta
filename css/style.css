@@ -269,7 +269,7 @@ input[type="radio"] {
 #slider label {
   margin: auto;
   width: 60%;
-  height: 80%; /* altera a altura do slider */
+  height: 100%; /* altera a altura do slider */
   border-radius: 4px;
   position: absolute;
   left: 0;
@@ -476,8 +476,6 @@ footer {
   @media screen and (max-width: 1030px) {
     .menu{
       display: none;
-	 
-	
     }
 
 	#logotipo{
@@ -591,8 +589,8 @@ footer {
   margin-bottom: 20px;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 0px #33ccff, /* sombra neon azul */ 0 0 20px #66ffff,
-    /* sombra neon verde-azul */  0 0 30px #99ff99; /* sombra neon verde */
+  box-shadow: 0 0 0px #33ccff, /* sombra neon azul */ 0 0 10px #66ffff,
+    /* sombra neon verde-azul */  0 0 15px #99ff99; /* sombra neon verde */
 }
 
 .cardNoticia {
@@ -601,19 +599,7 @@ footer {
   width: calc(18% - 5px);
   margin: 10px;
 } 
-/*
-.noticias-container {
-  /*background-color: #9600e6;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: #ccc;
-  font-size: 1rem;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
-  text-align: justify;
-}
-*/
+
 
 .noticia-imagem {
   background-color: #ccc;
@@ -629,4 +615,23 @@ footer {
 
 .review-imagem-texto, .noticia-imagem-texto {
   cursor: pointer;
+}
+
+
+.reviews-container, .noticias-container {
+  display: flex;
+  flex-wrap: nowrap;
+ /* overflow-x: auto;*/
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-container, .noticias-container {
+    flex-direction: row;
+  }
+  .cardReview, .cardNoticia {
+    width: calc(20% - 5px);
+  }
+  .review-imagem, .noticia-imagem {
+    width: 100%;
+  }
 }
