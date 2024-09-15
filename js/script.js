@@ -51,8 +51,8 @@ const reviews = [
       },
       {
         imagem: 'imagem-sims',
-        text: `The Sims 4 For Rent é a mais nova expansão do jogo de simulação de vida da EA
-								permitindo aos jogadores serem donos de um imóvel e gerenciar famílias diferentes no mesmo lugar |
+        text: `The Sims 4 Rent é a mais nova expansão do jogo da EA
+								permiti o jogador ser dono de imóvel e gerenciar famílias diferentes no mesmo lugar |
 								por Rômulo Justen 16/12/23`
       },
     ]
