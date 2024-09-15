@@ -56,6 +56,14 @@ const resetAudio = () => {
   audioGameOver.currentTime = 0;
 };
 
+function borda() {
+  btnGame.classList.add("btn-game_border");
+  setTimeout(() => {
+    btnGame.classList.remove("btn-game_border");
+  }, 1000);
+}
+setInterval(borda, 2000);
+
 //ADD CLASSE COM ANIMAÇÃO AO MÁRIO
 const jump = () => {
   mario.classList.add("jump");

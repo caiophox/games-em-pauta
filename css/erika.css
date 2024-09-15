@@ -15,114 +15,26 @@ body {
 }
 
 header {
-  width: calc(100% - 20px);
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   padding-inline: 16px;
+  width: calc(100% - 20px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 255;
   background-color: #00000099;
+  z-index: 255;
   backdrop-filter: blur(4px);
+  height: 100px;
 }
 
+/*---LOGO DO HEADER----*/
 .headerLogo {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.menu {
-  max-width: 1280px;
-  height: 70px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#btn-menu {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
-  outline: none;
-  transition: 0.2s;
-  display: none;
-  margin-right: 250px;
-}
-
-.linha {
-  width: 20px;
-  height: 3px;
-  background-color: #ccc;
-  display: block;
-  margin: 5px auto;
-  position: relative;
-  transform-origin: center;
-  transition: 0.2s;
-}
-
-#btn-menu.ativar {
-  border: 2px solid red;
-}
-
-#btn-menu.ativar .linha:nth-child(1) {
-  transform: translateY(10px) rotate(-45deg);
-  background-color: #ccc;
-}
-
-#btn-menu.ativar .linha:nth-child(3) {
-  transform: translateY(-8px) rotate(45deg);
-  background-color: #ccc;
-}
-
-#btn-menu.ativar .linha:nth-child(2) {
-  width: 0;
-}
-
-.menu-mobile {
-  background-color: #0000008b;
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 50px;
-  left: 0px;
-  width: 100%;
-  height: 0;
-  visibility: hidden;
-  transition: 0.5s;
-  overflow: hidden;
-}
-
-.menu-mobile nav a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 20px 30px;
-  font-size: 15pt;
-}
-
-.menu-mobile nav a:hover {
-  background-color: #0000008b;
-}
-
-.nav-list {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-}
-
-.nav-list a {
-  font-size: 18px;
-  color: #fff;
-  padding-block: 16px;
-  text-decoration: none;
 }
 
 #logotipo {
@@ -173,7 +85,98 @@ header {
       0 0 50px #cf0b0b, 0 0 60px #cf0b0b, 0 0 70px #cf0b0b, 0 0 80px #cf0b0b;
   }
 }
+/*---MENU CONVENCIONAL--*/
+.menu {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin-right: 150px;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+  text-decoration: none;
+}
+/*---MENU DE MOBILE--------*/
+/*---BOTÃO--*/
+#btn-menu {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s;
+  display: none;
+}
+/*--POSIÇÃO NORMAL DA LINHA--*/
+.linha {
+  width: 20px;
+  height: 3px;
+  background-color: #ccc;
+  display: block;
+  margin: 5px auto;
+  position: relative;
+  transform-origin: center;
+  transition: 0.2s;
+}
+/*--POSIÇÃO ATIVADO--*/
+#btn-menu.ativar {
+  border: 2px solid white;
+}
+
+.ativar .linha1 {
+  transform: translateY(10px) rotate(-45deg);
+  background-color: #ccc;
+}
+
+.ativar .linha3 {
+  transform: translateY(-8px) rotate(45deg);
+  background-color: #ccc;
+}
+
+.ativar .linha2 {
+  width: 0;
+}
+/*---DIV DO MOBILE-----*/
+.menu-mobile {
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  visibility: hidden;
+  background-color: #0000008b;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.menu-mobile nav a {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15pt;
+}
+
+.menu-mobile nav a:hover {
+  background-color: #0000008b;
+}
+
+/*--DIV LOGIN E CARRINHO---*/
 .opcoesUser {
   display: flex;
   align-items: center;
@@ -193,6 +196,7 @@ header {
   margin-right: 8px;
 }
 
+/*-- FORMULÁRIO LOGIN---*/
 .toggle-popup {
   display: none;
 }
@@ -210,6 +214,10 @@ header {
   z-index: 1000;
   backdrop-filter: blur(15px);
   padding: 60px;
+}
+
+.toggle-popup:checked + .popup-container {
+  display: flex;
 }
 
 .popup-content {
@@ -276,10 +284,6 @@ button[type="submit"] {
   margin-top: 20px;
 }
 
-.toggle-popup:checked + .popup-container {
-  display: flex;
-}
-
 #logotipo {
   font-family: "Rubik", system-ui;
   font-weight: 900;
@@ -299,8 +303,9 @@ button[type="submit"] {
   color: #dbdbdb;
   font-size: 2rem;
 }
+
+/*--INÍCIO DA PÁG, MÁRIO---*/
 .principal {
-  /* Vidro maior principal */
   background-color: #dbdbdb10;
   height: 100%;
   width: 1240px;
@@ -311,7 +316,6 @@ button[type="submit"] {
 }
 
 .containerreview {
-  /* Container transparente para os dois cards de review */
   height: auto;
   width: 100%;
   display: flex;
@@ -319,10 +323,10 @@ button[type="submit"] {
   flex-wrap: wrap;
 }
 
+/* Cards de review */
 .cardreview {
-  /* Cards de review */
   background-color: #dbdbdb10;
-  height: 240px;
+  height: 230px;
   width: calc(50% - 20px);
   min-width: 400px;
   margin: 10px;
@@ -330,9 +334,9 @@ button[type="submit"] {
 }
 
 .cortaconteudo {
-  height: calc(100% - 40px);
-  width: calc(100% - 50px);
-  margin: 25px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
   overflow: hidden;
 }
 
@@ -348,7 +352,7 @@ button[type="submit"] {
   height: 140px;
   margin-top: 1rem;
 }
-/* Definições de texto para as áreas comuns/padronizadas */
+
 .tituloreview {
   font-size: 1.5rem;
   text-shadow: 0.1rem 0.1rem #00000040;
@@ -361,8 +365,18 @@ button[type="submit"] {
 }
 
 .textoreview {
-  line-height: 21px;
+  height: fit-content;
+  line-height: 20px;
   letter-spacing: 0.6px;
+  text-indent: 45px;
+}
+
+.small-review {
+  display: block;
+  text-align: center;
+  text-indent: 0;
+  white-space: nowrap;
+  margin: 5px;
 }
 
 .textoreview,
@@ -377,7 +391,6 @@ button[type="submit"] {
 }
 
 .containernoticiatitulo {
-  /* Container transparente para o container de notícias e o container de título */
   height: auto;
   width: 100%;
   display: flex;
@@ -386,7 +399,6 @@ button[type="submit"] {
 }
 
 .containernoticia {
-  /* Container transparente para os dois cards de notícia */
   height: 240px;
   width: calc(50% - 20px);
   display: flex;
@@ -396,8 +408,8 @@ button[type="submit"] {
   margin: 10px;
 }
 
+/* Cards de notícias */
 .cardnoticia {
-  /* Cards de notícias */
   background-color: #dbdbdb10;
   height: 240px;
   width: calc(50% - 10px);
@@ -406,7 +418,7 @@ button[type="submit"] {
 }
 
 .cardnoticia img {
-  width: 220px;
+  width: 100%;
   height: 100px;
 }
 
@@ -439,40 +451,12 @@ button[type="submit"] {
 }
 
 .containermain {
-  /* Container transparente para a área livre e container lateral */
   width: 100%;
   height: auto;
   flex-direction: row-reverse;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.containerlateral {
-  /* Container transparente para o container de avaliações e a barra extra */
-  width: 25%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.containeravaliacoes {
-  /* Container trasparente para os 3 cards de avaliação */
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cardavaliacoes {
-  /* Cards de avaliações */
-  background-color: #dbdbdb10;
-  height: 120px;
-  width: calc(100% - 20px);
-  margin: 10px auto;
-  min-width: 160px;
-  box-shadow: 2px 4px 4px #00000050;
 }
 
 .livre {
@@ -497,22 +481,33 @@ button[type="submit"] {
   text-shadow: 0px 3px 5px white;
 }
 
-.livre .introducao_p {
+.small-livre {
+  white-space: nowrap;
+  margin-left: 30px;
+}
+
+.livre .artigo-segala {
   width: 66%;
-  padding: 0 5px;
+  height: auto;
   margin: 0 0 0 35px;
+  position: relative;
+}
+
+.livre .introducao_p {
+  padding: 0 5px;
   color: white;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
   text-align: justify;
   text-indent: 45px;
-  position: relative;
 }
-.img-lupa {
+
+.img-icone {
   width: 20px;
   margin: 0 2px;
   cursor: zoom-in;
+  border-radius: 5px;
 }
 
 .img-mario_segala {
@@ -527,7 +522,7 @@ button[type="submit"] {
   display: none;
 }
 
-.img-lupa:hover ~ .img-mario_segala {
+.img-icone:hover ~ .img-mario_segala {
   display: block;
 }
 
@@ -554,7 +549,7 @@ button[type="submit"] {
   width: 90%;
   height: 300px;
   margin: 0 auto;
-  background-image: url(./../img/erika/tijolinho.png);
+  background-image: url(../img/erika/tijolinho.png);
   border-radius: 30px;
   box-shadow: 0px 0px 50px white;
 }
@@ -586,6 +581,7 @@ button[type="submit"] {
 }
 
 .livre .box_historia-mario .historia_p {
+  text-indent: 45px;
   font-weight: bold;
   padding: 5px 10px;
   text-align: justify;
@@ -624,10 +620,6 @@ strong {
   display: flex;
   overflow-x: hidden;
   scroll-behavior: auto;
-  /* ---------Alterado para hidden para evitar barras de rolagem------ */
-  /*overflow-x: auto;
-  scrollbar-width: auto;
-  scrollbar-color: green #0000008c;*/
 }
 
 .box-range #range {
@@ -659,7 +651,7 @@ strong {
   appearance: none;
   width: 30px;
   height: 30px;
-  background: url("./../img/erika/mario-icon.png") no-repeat center;
+  background: url("../img/erika/mario-icon.png") no-repeat center;
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -668,7 +660,7 @@ strong {
 #range::-moz-range-thumb {
   width: 30px;
   height: 30px;
-  background: url("./../img/erika/mario-icon.png") no-repeat center;
+  background: url("../img/erika/mario-icon.png") no-repeat center;
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -688,9 +680,9 @@ strong {
 
 .btn-game {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 5px;
-  background-image: url(./../img/erika/tijolinho.png);
+  background-image: url(../img/erika/tijolinho.png);
   background-size: contain;
   border-radius: 5px;
   color: white;
@@ -702,14 +694,22 @@ strong {
   border: 2px solid white;
   cursor: pointer;
   z-index: 9;
-  animation: botão-game 10s ease-in-out infinite;
+  animation: botão-game 5s ease-in-out infinite;
+}
+
+.btn-game_border {
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0px 0px 10px white, 0px 0px 20px white, 0px 0px 40px white,
+    0px 0px 80px white;
 }
 
 @keyframes botão-game {
-  0% {
+  0%,
+  100% {
     transform: translateY(0);
   }
-  40% {
+  50% {
     transform: translateY(25px);
   }
 }
@@ -1096,7 +1096,6 @@ strong {
 }
 .box-controle .btn-comum {
   padding: 5px 15px;
-  /*margin-right: 25px;*/
   color: white;
   font-size: 18px;
   font-weight: bolder;
@@ -1133,7 +1132,7 @@ strong {
   height: 250px;
   overflow: hidden;
   display: none;
-  background-image: url(./../img/erika/cenario_nuvem.jpg);
+  background-image: url(../img/erika/cenario_nuvem.jpg);
   background-size: contain;
   box-shadow: 0 0 60px white;
   border-radius: 5px;
@@ -1260,27 +1259,64 @@ strong {
   transform: translate(-50%);
 }
 
-/*--AVALIAÇÕES---*/
+/*--ASIDE---*/
+.containerlateral {
+  width: 25%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/*---SEÇÃO AVALIAÇÕES---*/
+.containeravaliacoes {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardavaliacoes {
+  background-color: #dbdbdb10;
+  height: 120px;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  min-width: 160px;
+  box-shadow: 2px 4px 4px #00000050;
+}
+
+.cortaconteudo_avaliacoes {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  overflow: hidden;
+}
+
 .box_exemplo {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
 .box_exemplo .pessoa {
   width: 45px;
-  margin: 0 5px;
   border-radius: 35px;
 }
 
 .box_exemplo1 {
   display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .box_exemplo1 img {
   width: 30px;
+  height: 30px;
 }
 
 .box_exemplo2 {
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
@@ -1292,6 +1328,14 @@ strong {
   color: #dbdbdb;
 }
 
+.box_exemplo2 .nome_pessoa {
+  font-size: 1rem;
+  text-shadow: 0.1rem 0.1rem #00000040;
+  font-family: "Roboto", sans-serif;
+  color: #dbdbdb;
+}
+
+/*----LOJA OFICIAL--*/
 .extra {
   width: 93%;
   margin: 0 auto;
@@ -1571,22 +1615,34 @@ footer {
     height: auto;
     margin: 0;
   }
+
   .rodape p {
     font-size: 20px;
   }
-}
-@media screen and (max-width: 1190px) {
   .cortaconteudo {
     width: 100%;
     height: 100%;
     margin: 0;
   }
+  .livre {
+    height: auto;
+    margin: 0 auto;
+    min-width: 0;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 1045px) {
+  .nav-list {
+    gap: 12px;
+    margin: 0;
+  }
+  .nav-list a {
+    font-size: 17px;
+    padding: 0px;
+  }
   .reviewItens {
     width: 100%;
     height: auto;
-    padding: 15px;
   }
   .containernoticia {
     width: 100%;
@@ -1615,27 +1671,29 @@ footer {
   }
   .livre {
     width: 95%;
-    height: auto;
-    margin: 0 auto;
-    min-width: 0;
+  }
+  .box_exemplo2 q {
+    font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .cardreview {
-    width: 100%;
     min-width: 0;
     height: auto;
     margin: 10px;
   }
 
   .livre .box_historia-mario .historia_p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 900px) {
   .containerreview {
     width: 95%;
     margin: 10px auto;
+  }
+  .cardreview {
+    width: 100%;
   }
   .containernoticiatitulo {
     width: 95%;
@@ -1645,9 +1703,6 @@ footer {
     font-size: 1.4rem;
     line-height: 21px;
     letter-spacing: 1px;
-  }
-  .box_exemplo {
-    padding-top: 10px;
   }
 
   .box_exemplo2 {
@@ -1690,20 +1745,34 @@ footer {
     visibility: visible;
     height: calc(100vh - 90px);
   }
+  .livre .artigo-segala {
+    height: auto;
+  }
+  .livre .img-mario_segala {
+    width: 280px;
+    top: 50px;
+    left: 40px;
+  }
+  .small-livre {
+    margin: 0;
+    font-size: 17px;
+  }
 }
+
+@media screen and (max-width: 750px) {
+  .livre .img_mario-estrela {
+    width: 90%;
+    height: 230px;
+    position: relative;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .livre .introducao_p {
     width: 95%;
     margin: 10px auto;
     padding: 0 5px;
     font-size: 25px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .livre .img_mario-estrela {
-    width: 90%;
-    height: 230px;
-    position: relative;
   }
 }
 @media screen and (min-width: 751px) and (max-width: 1135px) {
@@ -1737,12 +1806,7 @@ footer {
   .headerLogo #logotipo {
     font-size: 30px;
   }
-  header .menu {
-    display: none;
-  }
-  header .searchBarra {
-    width: 40%;
-  }
+
   .cardnoticia {
     width: 49%;
     min-width: 0;
@@ -1758,6 +1822,7 @@ footer {
   }
   .cardavaliacoes {
     width: 33%;
+    height: auto;
     min-width: 0;
     margin: 10px 0;
   }
@@ -1812,7 +1877,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
-    padding: 0 10px;
     margin-bottom: 10px;
   }
   header .headerLogo {
@@ -1821,11 +1885,12 @@ footer {
     justify-content: center;
   }
   .menu-mobile {
-    top: 100px;
+    top: 110px;
   }
   .headerLogo #logotipo {
     font-size: 30px;
   }
+
   .reviewItens {
     flex-wrap: wrap;
   }
@@ -1835,7 +1900,7 @@ footer {
     margin: 0 auto;
   }
   .containernoticia {
-    gap: 30px;
+    gap: 20px;
   }
   .cardnoticia {
     width: 100%;
@@ -1859,36 +1924,26 @@ footer {
     text-align: center;
   }
   .textoreview {
+    width: 100%;
     line-height: normal;
     letter-spacing: 0.7px;
     font-size: 1.3rem;
   }
+
   .livre h1 {
     font-size: 40px;
   }
   .livre h2 {
     font-size: 35px;
   }
-  .livre .img-mario_segala {
-    width: 280px;
-    top: 50px;
-    left: 40px;
-  }
+
   .livre .box_historia-mario blockquote {
     font-size: 25px;
     text-align: center;
     padding: 8px 0;
     letter-spacing: 1px;
   }
-  .box_exemplo {
-    justify-content: space-evenly;
-  }
-  .box_exemplo1 img {
-    margin: 3px;
-  }
-  .box_exemplo2 q {
-    font-size: 1.5rem;
-  }
+
   .extra {
     height: auto;
     flex-direction: column;
@@ -1899,7 +1954,17 @@ footer {
     letter-spacing: 5px;
     margin: 10px 0;
   }
+  .livre .artigo-segala {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 
+  .livre .img-mario_segala {
+    width: 280px;
+    top: 50px;
+    left: 40px;
+  }
   .personagens {
     height: auto;
   }
