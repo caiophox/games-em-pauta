@@ -1,3 +1,13 @@
+// ---MENU RESPONSIVO---HEADER--
+const menuDiv = document.getElementById("menu-mobile");
+const btnAnimar = document.getElementById("btn-menu");
+
+menuDiv.addEventListener("click", animarMenu);
+
+function animarMenu() {
+  menuDiv.classList.toggle("abrir");
+  btnAnimar.classList.toggle("ativar");
+}
 //---INPUT TYPE RANGE--LIVRE/PERSONAGENS/RANGE--
 const imageContainer = document.getElementById("imageContainer");
 const slider = document.getElementById("range");
@@ -45,6 +55,14 @@ const resetAudio = () => {
   audioGameOver.pause();
   audioGameOver.currentTime = 0;
 };
+
+function borda() {
+  btnGame.classList.add("btn-game_border");
+  setTimeout(() => {
+    btnGame.classList.remove("btn-game_border");
+  }, 1000);
+}
+setInterval(borda, 2000);
 
 //ADD CLASSE COM ANIMAÇÃO AO MÁRIO
 const jump = () => {

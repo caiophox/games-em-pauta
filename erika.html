@@ -34,21 +34,27 @@
         <a id="logotipo" class="glow" href="index.html">GAMES EM PAUTA</a>
       </div>
 
-      <nav class="menu">
-        <a href="caio.html">Sci-Fi</a>
-        <a href="priscilla.html">Roblox</a>
-        <a href="vitor.html">Zelda</a>
-        <a href="vivian.html">The Sims</a>
-      </nav>
+      <div class="menu">
+        <nav class="nav-list">
+          <a href="caio.html">Sci-Fi</a>
+          <a href="priscilla.html">Roblox</a>
+          <a href="vitor.html">Zelda</a>
+          <a href="vivian.html">The Sims</a>
+        </nav>
+      </div>
 
-      <div class="searchBarra">
-        <input type="search" placeholder="Pesquise no site" />
-        <button class="search-button">
-          <img
-            src="./img/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="Buscar"
-          />
-        </button>
+      <button onclick="animarMenu()" id="btn-menu">
+        <span class="linha linha1"></span>
+        <span class="linha linha2"></span>
+        <span class="linha linha3"></span>
+      </button>
+      <div class="menu-mobile" id="menu-mobile">
+        <nav>
+          <a href="caio.html">Sci-Fi</a>
+          <a href="priscilla.html">Roblox</a>
+          <a href="vitor.html">Zelda</a>
+          <a href="vivian.html">The Sims</a>
+        </nav>
       </div>
       <div class="opcoesUser">
         <label for="togglePopup" class="opcao">
@@ -65,6 +71,36 @@
         </div>
       </div>
     </header>
+    <input type="checkbox" id="togglePopup" class="toggle-popup" />
+
+    <div id="popup" class="popup-container">
+      <div class="popup-content">
+        <label for="togglePopup" class="close-button">&times;</label>
+        <h2>Login</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="usuario@example.com"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required />
+          </div>
+          <button type="submit" onclick="logar(); return false">Entrar</button>
+
+          <div class="cadastro">
+            <a href="#">Esqueceu sua senha?</a>
+            <a href="#">Cadastre-se</a>
+          </div>
+        </form>
+      </div>
+    </div>
     <section class="principal">
       <div class="containerreview">
         <div class="cardreview">
@@ -80,7 +116,11 @@
                 principal estrela em um novo título 2D, estilo que consagrou o
                 personagem e onde a empresa faz escola a cada novo lançamento.
                 Jogo sensacional, muito bem feito, caprichado, fases que nunca
-                se repetem.
+                se repetem e cores que saltam os olhos.
+                <small class="small-review"
+                  >- Por <author>Aucenir Camacho</author> |
+                  <time datetime="2024-07-08T11:03">08/07/2024 - 11:03 -</time>
+                </small>
               </p>
             </div>
           </div>
@@ -99,6 +139,10 @@
                 movimentação acelerada e suporte ao multiplayer online, e a
                 adição do curioso Bowser’s Fury.Esse e o melhor jogo do super
                 mario do universo infinito.
+                <small class="small-review"
+                  >- Por <author>José Edson</author> |
+                  <time datetime="2024-08-17T21:46">17/08/2024 - 21:46 -</time>
+                </small>
               </p>
             </div>
           </div>
@@ -137,11 +181,11 @@
       <main class="containermain">
         <section class="livre">
           <h1>Conheça o Mário!</h1>
-          <article>
+          <article class="artigo-segala">
             <p class="introducao_p">
               <strong>Mario Segale,</strong>
               <img
-                class="img-lupa"
+                class="img-icone"
                 src="img/erika/lupa.png"
                 alt="imagem de lupa"
               />
@@ -158,13 +202,19 @@
               <cite>"Mario"</cite> em sua homenagem. Nascido em 1934, nos deixou
               em 2018 aos 84 anos. Sua bondade eternizada atravéz do seu nome,
               inspirando nosso heroi no Game <cite>Super Mário Bros</cite>...
-              <small
-                >- UOL,
-                <time datetime="28-08-2023">28 de agosto de 2023 -</time>
+              <small class="small-livre">
+                <abbr title="Universo Online">
+                  <img
+                    class="img-icone"
+                    src="img/erika/icone-uol.png"
+                    alt="imagem uol"
+                /></abbr>
+                <author>Arthur Oliveira</author> |
+                <time datetime="2023-06-17T20:17">17/06/2024 - 20:17 </time>
               </small>
               <img
                 class="img-mario_segala"
-                src="img/erika/mario-arnold-.png"
+                src="img/erika/mario-arnold-.jpg"
                 alt="imagem de mário segala"
               />
             </p>
@@ -183,28 +233,38 @@
               loop
             ></video>
           </div>
-          <div class="box_historia-mario">
-            <article>
-              <blockquote>
-                - Plataforma: Nintendo Entertainment System -
-              </blockquote>
-              <p class="historia_p">
-                <cite>Super Mário</cite> é uma série icônica de jogos de
-                plataforma criada pela Nintendo, tendo como protagonista o
-                personagem <strong>Mário</strong>, um encanador italiano.
-                Lançada pela primeira vez em 1985 com o jogo
-                <cite>Super Mário Bros</cite> para a
-                <abbr title="Nintendo Entertainment System">( NES )</abbr>, a
-                série é fundamental para o gênero de plataforma e continua sendo
-                uma das franquias de videogame mais vendidas. Em cada jogo,
-                Mario, muitas vezes acompanhado de seu irmão
-                <strong>Luigi</strong>, embarca em aventuras para salvar a
-                <strong>Princesa Peach</strong> do vilão
-                <strong>Bowser</strong>, atravessando diversos mundos com
-                desafios que incluem pular plataformas e coletar itens.
-              </p>
-            </article>
-          </div>
+
+          <article class="box_historia-mario">
+            <blockquote>
+              - Plataforma: Nintendo Entertainment System -
+            </blockquote>
+            <p class="historia_p">
+              <cite>Super Mário</cite> é uma série icônica de jogos de
+              plataforma criada pela Nintendo, tendo como protagonista o
+              personagem <strong>Mário</strong>, um encanador italiano. Lançada
+              pela primeira vez em 1985 com o jogo
+              <cite>Super Mário Bros</cite> para a
+              <abbr title="Nintendo Entertainment System">( NES )</abbr>, a
+              série é fundamental para o gênero de plataforma e continua sendo
+              uma das franquias de videogame mais vendidas. Em cada jogo, Mario,
+              muitas vezes acompanhado de seu irmão <strong>Luigi</strong>,
+              embarca em aventuras para salvar a
+              <strong>Princesa Peach</strong> do vilão <strong>Bowser</strong>,
+              atravessando diversos mundos com desafios que incluem pular
+              plataformas e coletar itens...
+              <small class="small-livre">
+                <abbr title="Erika Oliveira (Developer Frontend)">
+                  <img
+                    class="img-icone"
+                    src="img/erika/frontend2.png"
+                    alt="imagem sigra eo"
+                /></abbr>
+                <author>Erika Oliveira</author> |
+                <time datetime="2023-08-17T15:36">17/08/2024 - 15:36 </time>
+              </small>
+            </p>
+          </article>
+
           <!------SEÇÃO PERSONAGENS--------->
           <section class="personagens">
             <div class="box-range">
@@ -393,10 +453,10 @@
             </div>
           </section>
         </section>
-        <div class="containerlateral">
-          <div class="containeravaliacoes">
+        <aside class="containerlateral">
+          <section class="containeravaliacoes">
             <div class="cardavaliacoes">
-              <div class="cortaconteudo cortaconteudo_avaliacoes">
+              <div class="cortaconteudo_avaliacoes">
                 <div class="box_exemplo">
                   <img
                     class="pessoa"
@@ -427,13 +487,17 @@
                   </div>
                 </div>
                 <div class="box_exemplo2">
-                  <q>Um baita downgrad!</q>
+                  <q
+                    >Mário Wonder, um baita downgrad, mas Mário é top de
+                    qualquer versão!</q
+                  >
+                  <p class="nome_pessoa">- Ana Clara | Rio de Janeiro, RJ -</p>
                 </div>
               </div>
             </div>
 
             <div class="cardavaliacoes">
-              <div class="cortaconteudo cortaconteudo_avaliacoes">
+              <div class="cortaconteudo_avaliacoes">
                 <div class="box_exemplo">
                   <img
                     class="pessoa"
@@ -463,12 +527,18 @@
                     />
                   </div>
                 </div>
-                <div class="box_exemplo2"><q>Adorei o jogo!</q></div>
+                <div class="box_exemplo2">
+                  <q
+                    >Bowser’s Fury é versátil e inigualável. Eu e meu filho
+                    Adoramos o jogo!</q
+                  >
+                  <p class="nome_pessoa">- Gabriel Souza | Fortaleza, CE -</p>
+                </div>
               </div>
             </div>
 
             <div class="cardavaliacoes">
-              <div class="cortaconteudo cortaconteudo_avaliacoes">
+              <div class="cortaconteudo_avaliacoes">
                 <div class="box_exemplo">
                   <img
                     class="pessoa"
@@ -498,10 +568,16 @@
                     />
                   </div>
                 </div>
-                <div class="box_exemplo2"><q>Exelente jogo!!</q></div>
+                <div class="box_exemplo2">
+                  <q
+                    >A Nintendo se superol, Mário Cart, tem gráfico, áudio, e
+                    desáfios tops.</q
+                  >
+                  <p class="nome_pessoa">- Carol Imperiano | Baruerí, SP -</p>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
           <!-------INPUT type checkbox--------------------->
 
           <div class="extra">
@@ -773,7 +849,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </aside>
       </main>
     </section>
     <footer class="rodape">
