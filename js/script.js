@@ -9,16 +9,93 @@ function animarMenu(){
     btnAnimar.classList.toggle("ativar");
 };
 
-// Validação do formulário (popup login)
+// Validação do formulário (Login)
 function logar(){
- var login = document.getElementById('email').value;
- var senha = document.getElementById('senha').value;
-  if(login == 'teste' && senha == 'teste'){
-    alert('sucesso');
-  }else {
-    alert('Senha ou usuário incorretos')
-  }
-}
+  var login = document.getElementById('email').value;
+  var senha = document.getElementById('senha').value;
+   if(login == 'teste' && senha == 'teste'){
+     alert('sucesso');
+   }else {
+     alert('Senha ou usuário incorretos')
+   }
+ }
+
+// Validação Popup
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const iconClose = document.querySelector(".icon-close");
+
+registerLink.addEventListener("click", ()=>{
+    wrapper.classList.add("active");
+});
+
+loginLink.addEventListener("click", ()=>{
+    wrapper.classList.remove("active");
+});
+
+iconClose.addEventListener("click", ()=>{
+    wrapper.classList.remove("active-popup");
+    togglePopup.checked = false;
+});
+
+// Validação do Formulário de Cadastro
+
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const senhaInput = document.getElementById("senha");
+   
+    
+    usernameInput.addEventListener("change", (evento)=>{
+   
+        const valor = evento.target.value
+
+        let usernameValido = valor.length >= 3
+        
+        if(usernameValido){
+            alert("Username Válido")
+    
+            usernameInput.classList.add("correct")
+            usernameInput.classList.remove("error")
+    
+        } else {
+            alert("Nome deve conter pelo menos 3 caracteres")
+        }
+    });
+
+    emailInput.addEventListener("change", (evento)=>{
+   
+        const valor = evento.target.value
+       
+        if(valor.includes("@")){
+            alert("Email Válido")
+    
+            emailInput.classList.add("correct")
+            emailInput.classList.remove("error")
+    
+        } else {
+        alert("Email Inválido. Deve conter um @")
+        }
+    });
+
+    senhaInput.addEventListener("change", (evento)=>{
+   
+        const valor = evento.target.value
+
+        let senhaValida = valor.length >= 6
+        
+        if(senhaValida){
+            alert("Senha Válida.")
+    
+            senhaInput.classList.add("correct")
+            senhaInput.classList.remove("error")
+    
+        } else {
+            alert("Sua senha deve conter pelo menos 6 caracteres!")
+        }
+
+    });
+
 
 // Container NoticiaReview
 const container = document.querySelector('.containerNoticiaReview');

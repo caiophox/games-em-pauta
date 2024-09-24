@@ -121,8 +121,11 @@ header {
   margin-right: 8px;
 }
 
+/*Estilização Formulário*/
+
 .toggle-popup {
   display: none;
+  
 }
 
 .popup-container {
@@ -149,65 +152,201 @@ header {
   text-align: center;
 }
 
-.close-button {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-  float: right;
-  cursor: pointer;
+.wrapper{
+  position: relative; 
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform .5s ease, height .2s ease;
 }
 
-.input-group {
-  margin-bottom: 15px;
-  text-align: left;
+.wrapper.active-popup{
+   transform: scale(1);
 }
 
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
+.wrapper.active{
+   height: 520px;
 }
 
-.input-group input {
-  position: relative;
-	width: 100%;
-	padding: 15px 20px;
-	outline: none;
-	font-size: 1em;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-button[type="submit"] {
-  background-color: #333;
+.wrapper .icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #2a0171;
+  font-size: 2em;
   color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
   cursor: pointer;
-  width: 100%;
-  outline: none;
+  z-index: 1;
 }
 
-.cadastro{
-	display: flex;
-	justify-content: space-between;
+.wrapper .form-box{
+   width: 100%;
+   padding: 40px;
 }
 
-.cadastro a {
-	font-size: 0.8em;
-	color:  black;
-	font-weight: 500;
-	text-decoration: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	margin-top: 20px;
+.wrapper .form-box.login{
+   transition: transform .18s ease;
+   transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+   transition: none;
+   transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+   position: absolute;
+   transition: none;
+   transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register{
+   transition: transform .18s ease;
+   transform: translateX(0);
+}
+
+.form-box h2{
+   font-size: 2em;
+   color: #ffffffb5;
+   text-align: center;
+   font-weight: 600;
+}
+
+.input-box{
+   position: relative;
+   width: 100%;
+   height: 50px;
+   border-bottom: 2px solid #000000;
+   margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute; 
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #ffffffea;
+  font-weight: 400;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+   top: -5px;
+}
+
+.input-box input{
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   border: none;
+   outline: none;
+   color: #ffffffb5;
+   font-weight: 600;
+   padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #ffffffb5;
+  line-height: 57px;
+}
+
+.remember-forgot{
+   font-size: .9em;
+   color: #ffffffea;
+   font-weight: 500;
+   margin: -15px 0 15px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.remember-forgot label input{
+   accent-color: #000000;
+   margin-right: 3px;
+   font-weight: 400;
+}
+
+.remember-forgot a{
+   color: #ffffffea;
+   font-weight: 400;
+   text-decoration: none;
+}
+
+.remember-forgot a:hover{
+   text-decoration: underline;
+}
+
+.btn{
+   width: 100%;
+   height: 45px;
+   background: #2a0171;
+   border: none;
+   outline: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-size: 1em;
+   color: #fff;
+   font-weight: 500;
+}
+
+.login-register{
+   font-size: .9em;
+   color: #ffffffea;
+   text-align: center;
+   font-weight: 500;
+   margin: 25px 0 10px;
+}
+
+.login-register p a{
+   color:#ffffffea;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.login-register p a:hover{
+   text-decoration: underline;
+}
+
+#data_nascimento {
+   position: absolute;
+   font-size: .8em;
+   color: #000000;
+   top: 5px;
+
+}
+
+legend {
+  color: #ffffffea;
+  font-weight: 400;
+  margin-left: 4px;
 }
 
 .toggle-popup:checked + .popup-container {
   display: flex;
 }
-
+.popup-container.active {
+  display: block;
+}
 
 #logotipo {
   font-family: "Rubik", system-ui;
@@ -401,6 +540,7 @@ footer {
 .rodape a.link-rodape:hover {
   text-decoration: underline;
 }
+
 
 /*Estilização do menu-mobile*/
 
